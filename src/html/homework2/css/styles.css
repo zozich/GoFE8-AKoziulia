@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Myriad Pro';
+    src: url(../fonts/MyriadPro-Regular.woff);
+}
+
+body {
+    margin: 0;
+    width: 1024px;
+    height: 1024px;
+    background-color: #F5F3F4;
+}
+
+header h1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #010101;
+    font-family: Arial;
+    font-size: 36px;
+    text-transform: uppercase;
+}
+
+.content {
+    margin: auto;
+    width: 500px;
+}
+
+.content-block {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(31, 31, 31, 0.22);
+}
+
+.content-block:last-child {
+    border: none;
+}
+
+.photo {
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    border: 1px solid rgb(143, 143, 141);
+    background-color: blue;
+}
+
+.institution-info {
+    margin-top: 24px;
+    color: rgb(94, 94, 94);
+    text-align: left;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+ul {
+    margin: 0;
+}
+
+.motivation-list {
+    color: rgb(94, 94, 94);
+    font-family: 'Myriad Pro';
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: #1f1f1f;
+    text-align: left;
+    font-family: 'Myriad Pro';
+    font-size: 18px;
+}
+
+.content-text {
+    margin-left: 35px;
+}
+
+a {
+    font-style: italic;
+}
