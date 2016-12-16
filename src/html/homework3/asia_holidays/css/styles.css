@@ -1,0 +1,93 @@
+body {
+    background-color: black;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    color:  #e6e6e6;
+    font-family: Tahoma;
+    text-align: center;
+}
+
+.wrapper {
+    margin: 0 auto;
+    width: 820px;
+}
+
+header {
+    height: 150px;
+    margin-top: 55px;
+}
+
+.logo {
+    float: left;
+    padding-top: 75px;
+    width: 263px;
+    height: 75px;
+    background-image: url("../img/palm_tree.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+}
+
+.logo-description {
+    font-size: 10px;
+}
+
+.contacts {
+    float: right;
+    margin-top: 100px;
+    text-align: left;
+}
+
+.contact-us {
+    margin-bottom: 3px;
+    font-size: 10px;
+}
+
+.phone-email {
+    font-size: 8px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.row {
+    overflow: hidden;
+    margin-bottom: 70px;
+}
+
+.row:last-child {
+    margin: 0;
+}
+
+.block {
+    margin-right: 12px;
+    width: 262px;
+    display: inline-block;
+}
+
+.row .block:last-child {
+    margin: 0;
+}
+
+.country-photo {
+    margin-top: 2px;
+    width: 256px;
+    height: 175px;
+    border: 2px solid #39383b;
+    -webkit-box-shadow: 0px 0px 0px 2px rgba(157,157,157,1);
+    -moz-box-shadow: 0px 0px 0px 2px rgba(157,157,157,1);
+    box-shadow: 0px 0px 0px 2px rgba(157,157,157,1);
+}
+
+.country-name {
+    display: inline-block;
+    margin-top: 3px;
+    font-size: 16px;
+}
+
+footer {
+    margin-top: 150px;
+    font-size: 10px;
+}
