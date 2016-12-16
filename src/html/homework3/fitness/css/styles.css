@@ -1,0 +1,142 @@
+body {
+    background-color: #f9f9f9;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 50px 45px;
+    width: 1060px;
+    background-color: white;
+    box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+header {
+    width: 145px;
+    height: 40px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu-top {
+    background: -webkit-linear-gradient(90deg, #444343 0%, #5e5e5e 100%);
+    background: -moz-linear-gradient(90deg, #444343 0%, #5e5e5e 100%);
+    background: -o-linear-gradient(90deg, #444343 0%, #5e5e5e 100%);
+    background: -ms-linear-gradient(90deg, #444343 0%, #5e5e5e 100%);
+    background: linear-gradient(0deg, #444343 0%, #5e5e5e 100%);
+}
+
+.menu-top li,
+.menu-bottom li {
+    display: inline-block;
+}
+
+.menu-top a,
+.menu-bottom a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+}
+
+.menu-top {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.menu-top a {
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 15px;
+    color: white;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.menu-top a:hover {
+    background: -webkit-linear-gradient(90deg, #2e2e2e 0%, #4a4a4a 100%);
+    background: -moz-linear-gradient(90deg, #2e2e2e 0%, #4a4a4a 100%);
+    background: -o-linear-gradient(90deg, #2e2e2e 0%, #4a4a4a 100%);
+    background: -ms-linear-gradient(90deg, #2e2e2e 0%, #4a4a4a 100%);
+    background: linear-gradient(0deg, #2e2e2e 0%, #4a4a4a 100%);
+    line-height: 40px;
+}
+
+.column {
+    float: left;
+}
+
+.menu-left {
+    width: 240px;
+}
+
+.content {
+    margin-left: 70px;
+    width: 750px;
+}
+
+.description {
+    padding: 30px;
+    color: #2c2c2c;
+}
+
+.photo {
+    border: 1px solid #c8c8c8;
+}
+
+.photo img {
+    display: block;
+    margin: 0 auto;
+}
+
+.menu-left a {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    width: 240px;
+    padding-left: 22px;
+    border: 1px solid #c8c8c8;
+    font-size: 13px;
+    color: #656363;
+}
+
+.menu-left a:hover {
+    width: 227px;
+    padding-left: 35px;
+    background-color: #f9f9f9;
+}
+
+.description {
+    font-size: 13px;
+    line-height: 21px;
+    color:  #2c2b2b;
+}
+
+footer {
+    clear: both;
+    margin-top: 60px;
+    background-color:  #e1e1e1;
+    overflow: hidden;
+}
+
+.menu-bottom {
+    float: left;
+}
+
+.menu-bottom a {
+    padding-left: 25px;
+    padding-right: 40px;
+    font-size: 13px;
+    color: #2c2c2c;
+}
+
+.menu-bottom a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    float: right;
+    margin-right: 26px;
+    line-height: 40px;
+    font-size: 13px;
+}
