@@ -6,7 +6,7 @@ body {
 .wrapper {
     margin: 0 auto;
     padding: 50px 45px;
-    width: 1060px;
+    width: 966px;
     background-color: white;
     box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, 0.3);
 }
@@ -46,14 +46,16 @@ a {
 }
 
 .menu-top a {
-    padding-left: 25px;
-    padding-right: 25px;
+    padding: 0 25px;
     font-size: 15px;
     color: white;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .menu-top a:hover {
+    padding: 0 24px;
+    border-left: 1px solid rgba(256, 256, 256, 0.3);
+    border-right: 1px solid rgba(256, 256, 256, 0.3);
     background: -webkit-linear-gradient(90deg, #2e2e2e 0%, #4a4a4a 100%);
     background: -moz-linear-gradient(90deg, #2e2e2e 0%, #4a4a4a 100%);
     background: -o-linear-gradient(90deg, #2e2e2e 0%, #4a4a4a 100%);
@@ -72,7 +74,7 @@ a {
 
 .content {
     margin-left: 70px;
-    width: 750px;
+    width: 656px;
 }
 
 .description {
