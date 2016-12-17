@@ -4,24 +4,21 @@
 }
 
 body {
-    margin: 0;
-    width: 1024px;
-    height: 1024px;
+    margin-top: 50px;
     background-color: #F5F3F4;
+    font-family: Arial, sans-serif;
 }
 
 header h1 {
-    margin-top: 50px;
     margin-bottom: 30px;
     text-align: center;
     color: #010101;
-    font-family: Arial;
     font-size: 36px;
     text-transform: uppercase;
 }
 
 .content {
-    margin: auto;
+    margin: 0 auto;
     width: 500px;
 }
 
@@ -47,7 +44,6 @@ header h1 {
     margin-top: 24px;
     color: rgb(94, 94, 94);
     text-align: left;
-    font-family: Arial;
     font-size: 14px;
     font-weight: bolder;
 }
@@ -67,6 +63,7 @@ h2 {
     text-align: left;
     font-family: 'Myriad Pro';
     font-size: 18px;
+    font-weight: bold;
 }
 
 .content-text {
