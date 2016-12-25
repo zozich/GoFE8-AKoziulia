@@ -1,14 +1,14 @@
 body {
-    background: rgb(12, 115, 158) url("../img/background.jpg") top repeat-x;
+    background: rgb(12, 115, 158) url('../img/background.jpg') top repeat-x;
     font-family: Tahoma, Arial, sans-serif;
 }
 
 .wrapper {
     width: 1000px;
     margin: 0 auto;
-    background-color: white;
+    background-color: #fff;
+    box-shadow: 0 1px 10px 2px rgba(0, 0, 0, .75);
     overflow: hidden;
-    box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, 0.75);
 }
 
 a {
@@ -21,9 +21,9 @@ header a {
 }
 
 .logo {
-    float: left;
     padding-top: 11px;
     padding-left: 25px;
+    float: left;
 }
 
 .logo a {
@@ -31,7 +31,7 @@ header a {
     width: 283px;
     height: 69px;
     padding-top: 95px;
-    background: url("../img/logo.png") top no-repeat;
+    background: url('../img/logo.png') top no-repeat;
     font-size: 12px;
     text-align: center;
 }
@@ -41,9 +41,9 @@ header a {
 }
 
 .contacts {
-    float: right;
     margin-top: 11px;
     margin-right: 20px;
+    float: right;
     text-align: left;
 }
 
@@ -59,17 +59,17 @@ header a {
 }
 
 .country-list {
+    margin-top: 35px;
     float: right;
     clear: right;
-    margin-top: 35px;
     font-size: 10px;
     text-align: center;
 }
 
-.clearfix:after {
-    content: '';
+.clearfix::after {
     display: block;
     clear: both;
+    content: '';
 }
 
 .country-list li {
@@ -86,42 +86,42 @@ header a {
 
 .top-menu {
     position: relative;
+    height: 27px;
     margin-top: 1px;
     padding-left: 25px;
-    height: 27px;
-    line-height: 27px;
-    box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, 0.75);
+    border-bottom: 1px solid #000;
     background: -webkit-linear-gradient(90deg, #373737 0%, #303030 100%);
     background: -moz-linear-gradient(90deg, #373737 0%, #303030 100%);
     background: -o-linear-gradient(90deg, #373737 0%, #303030 100%);
     background: -ms-linear-gradient(90deg, #373737 0%, #303030 100%);
     background: linear-gradient(0deg, #373737 0%, #303030 100%);
-    color: rgba(255, 255, 255, 0.8);
-    border-bottom: 1px solid black;
+    color: rgba(255, 255, 255, .8);
+    line-height: 27px;
+    box-shadow: 1px 3px 6px 0 rgba(0, 0, 0, .75);
     z-index: 10;
 }
 
-ul.menu > li {
-    float: left;
+.menu > li {
     position: relative;
+    float: left;
 }
 
-ul.menu > li > a {
+.menu > li > a {
     display: block;
     height: 26px;
-    padding-left: 40px;
     padding-right: 20px;
+    padding-left: 40px;
+    color: rgba(255, 255, 255, .8);
     font-size: 14px;
-    color: rgba(255, 255, 255, 0.8);
 }
 
-.dropdown-menu > a:after {
-    content: url('../img/dropdown.png');
+.dropdown-menu > a::after {
     display: inline;
     padding-left: 8px;
+    content: url('../img/dropdown.png');
 }
 
-ul.menu > li:hover > .sub-menu {
+.menu > li:hover > .sub-menu {
     display: block;
 }
 
@@ -129,18 +129,18 @@ ul.menu > li:hover > .sub-menu {
     display: none;
     position: absolute;
     top: 28px;
-    left: 40px;
-    font-size: 14px;
+    left: 30px;
     background-color: #303030;
-    box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, 0.75);
+    font-size: 14px;
+    box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, .75);
 }
 
 .sub-menu > li > a {
     display: block;
     width: 100%;
-    padding-left: 10px;
     padding-right: 50px;
-    color: rgba(255, 255, 255, 0.8);
+    padding-left: 10px;
+    color: rgba(255, 255, 255, .8);
 }
 
 .column-background {
@@ -148,65 +148,61 @@ ul.menu > li:hover > .sub-menu {
     float: left;
 }
 
-.column-background .info {
+.background-info {
     position: relative;
+    right: 582px;
     background-color: #edeef0;
-    right: 543px;
 }
 
-.column-background .main-content {
+.background-main {
     position: relative;
-    right: 170px;
+    right: 209px;
+    background-color: #fff;
 }
 
-.column-background .news {
+.background-news {
     background-color: #edeef0;
 }
 
 .column {
-    float: left;
-    overflow: hidden;
     position: relative;
-    left: 713px;
-    padding-left: 15px;
+    left: 791px;
     padding-right: 24px;
     padding-bottom: 15px;
+    padding-left: 15px;
+    float: left;
     color: #424c43;
     font-size: 14px;
     line-height: 24px;
+    overflow: hidden;
     z-index: 5;
 }
 
-.info,
-.news {
+.column .info,
+.column .news {
     width: 170px;
 }
 
-.main-content {
+.column .main-content {
     width: 543px;
 }
 
 .column h2 {
     padding-top: 10px;
-    padding-bottom: 5px;
     font-size: 18px;
     text-align: center;
 }
 
-.main-content p {
+.column p {
     padding-top: 10px;
-}
-
-.main-content p:first-child {
-    padding-top: 0px;
 }
 
 footer {
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
-    color: rgba(255, 255, 255, 0.8);
-    font-size: 12px;
     clear: both;
+    color: rgba(255, 255, 255, .8);
+    font-size: 12px;
     text-align: center;
 }
