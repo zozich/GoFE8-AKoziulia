@@ -1,3 +1,7 @@
+header ul {
+    display: inline;
+}
+
 header ul li {
     display: inline-block;
 }
