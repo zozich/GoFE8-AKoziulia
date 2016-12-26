@@ -8,6 +8,22 @@ td {
     border: 20px solid #000;
 }
 
+td:first-child {
+    border-left: 1px solid #000;
+}
+
+td:last-child {
+    border-right: 1px solid #000;
+}
+
+tr:first-child td {
+    border-top: 1px solid #000;
+}
+
+tr:last-child td {
+    border-bottom: 1px solid #000;
+}
+
 tr {
     height: 100px;
 }
