@@ -1,6 +1,6 @@
 table {
     border-collapse: collapse;
-    width: 750px;
+    width: 770px;
 }
 
 td {
@@ -12,8 +12,8 @@ tr {
     height: 100px;
 }
 
-.black {
-    background-color: #000;
+.dark-grey {
+    background-color: #222;
 }
 
 .blue {
