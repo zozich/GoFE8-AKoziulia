@@ -1,0 +1,38 @@
+header ul li {
+    display: inline-block;
+}
+
+header ul li a {
+    display: block;
+}
+
+main {
+    position: absolute;
+    margin: 0 auto;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -300px;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.container {
+    position: relative;
+    margin: 0 auto;
+    width: 150px;
+}
+
+.divider {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-element {
+    margin-top: 10px;
+}
+
+.form-footer {
+    text-align: center;
+}
