@@ -1,6 +1,11 @@
+table {
+    border-collapse: collapse;
+    width: 750px;
+}
+
 td {
-    width: 100px;
-    border: 4px solid #000;
+    width: 80px;
+    border: 20px solid #000;
 }
 
 tr {
