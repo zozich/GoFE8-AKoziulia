@@ -1,0 +1,24 @@
+td {
+    width: 100px;
+    border: 4px solid #000;
+}
+
+tr {
+    height: 100px;
+}
+
+.black {
+    background-color: #000;
+}
+
+.blue {
+    background-color: #00f;
+}
+
+.red {
+    background-color: #f00;
+}
+
+.yellow {
+    background-color: #ff0;
+}
