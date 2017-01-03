@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Zazor</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="contacts">
+                (044)123-45-67 (044)567-89-10
+            </div>
+
+            <form class="login-form" action="">
+                <input type="text" name="login" placeholder="логин">
+                <input type="password" name="password" placeholder="пароль">
+                <a href="#" class="enter">вход</a>
+                <a href="#" class="registration">регистрация</a>
+                <a href="#" class="forgot-password">забыли пароль?</a>
+            </form>
+
+            <aside>
+                <a href="#"><img src="img/aaa"></a>
+                <a href="#"><img src="img/aaa"></a>
+                <a href="mailto:info@zazor.com.ua"><img src="img/aaa"></a>
+            </aside>
+        </header>
+
+        <main>
+            <div class="logo">
+                <img src="img/logo.jpg" alt="zazor.com.ua">
+            </div>
+
+            <div class="bar-top">
+                <ul class="menu menu-top">
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Оплата</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+
+                <a href="#" class="basket"><img src="img/basket.jpg"></a>
+                <span>товаров:</span><span id="itemCounter">0</span>
+                <span>на сумму:</span><span id="totalAmount">0,00 грн.</span>
+            </div>
+
+            <div class="search">
+                <form class="search-auto" action="">
+                    <div class="form-header">
+                        <span>Диски:</span>
+                        <h2>Поиск по автомобилю</h2>
+                        <span>Шины:</span>
+                    </div>
+                    <div>
+                        <div>
+                            <ul>
+                                <li>Марка <span>авто:</span></li>
+                                <li>Модель <span>автомобиля:</span></li>
+                                <li>Год выпуска <span>автомобиля:</span></li>
+                                <li>Комплектация</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <select name="autoMmake"></select>
+                            <select name="autoModel"></select>
+                            <select name="autoYear"></select>
+                            <select name="autoEquipment"></select>
+                        </div>
+                        <div>
+                            Марка <span>авто:</span>
+                            Модель <span>автомобиля:</span>
+                            Год выпуска <span>автомобиля:</span>
+                            Комплектация
+                        </div>
+                        <div>
+                            <select name="tyreMake"></select>
+                            <select name="tyreModel"></select>
+                            <select name="tyreYear"></select>
+                            <select name="tyreEquipment"></select>
+                        </div>
+                    </div>
+                    <a href="#">поиск...</a>
+                </form>
+
+                <form class="search-tyre" action="">
+                    <h2>Поиск шин</h2>
+                    <div>
+                        <ul>
+                            <li>Размер</li>
+                            <li>R</li>
+                            <li>Сезон:</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <select name="tyreSize1"></select> / <select name="tyreSize2"></select>
+                        <select name="tyreRadius"></select>
+                        <input type="checkbox" id="season-summer">
+                        <label for="season-summer">лето</label>
+                        <input type="checkbox" id="season-winter">
+                        <label for="season-winter">зима</label>
+                        <input type="checkbox" id="season-all">
+                        <label for="season-all">всесез</label>
+                    </div>
+                    <a href="#">поиск...</a>
+                </form>
+
+                <form class="search-disc" action="">
+                    <div class="header">
+                        <h2>Поиск дисков</h2>
+                    </div>
+                    <div>
+                        <div>
+                            <ul>
+                                <li>Диаметр <span>диска:</span></li>
+                                <li>Количество <span>крепежных отверстий:</span></li>
+                                <li>Диаметр <span>расположения крепежных отверстий:</span></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <select name="discDiameter"></select>
+                            <select name="discNumberHolder"></select>
+                            <select name="discDiameterHolder"></select>
+                        </div>
+                        <div>
+                            ДЦО <span>(диаметр цетрального отверстия):</span>
+                            ET <span>(вылет диска):</span>
+                        </div>
+                        <div>
+                            <select name="discDiameterCenter"></select>
+                            <select name="discEt"></select>
+                        </div>
+                    </div>
+                    <a href="#">поиск...</a>
+                </form>
+            </div>
+
+            <div class="content">
+                <div class="sidebar sidebar-left">
+                    <h2>Каталог продукции:</h2>
+                    <div class="tyre-selection">
+                        <h3>Шины</h3>
+                        <ul>
+                            <li><a href="#">Наименование 1</a></li>
+                            <li><a href="#">Наименование 2</a></li>
+                            <li><a href="#">Наименование 3</a></li>
+                            <li><a href="#">Наименование 4</a></li>
+                        </ul>
+                    </div>
+                    <div class="disc-selection">
+                        <h3>Диски</h3>
+                        <ul>
+                            <li><a href="#">Наименование 1</a></li>
+                            <li><a href="#">Наименование 2</a></li>
+                            <li><a href="#">Наименование 3</a></li>
+                            <li><a href="#">Наименование 4</a></li>
+                        </ul>
+                    </div>
+                    <div class="screw-selection">
+                        <h3>Болты</h3>
+                        <ul>
+                            <li><a href="#">Наименование 1</a></li>
+                            <li><a href="#">Наименование 2</a></li>
+                            <li><a href="#">Наименование 3</a></li>
+                            <li><a href="#">Наименование 4</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="products">
+                    <div class="product-group">
+                        <div class="product">
+                            <h2>Goodyear</h2>
+                            <h3>Ultra Grip Extreme</h3>
+                            <img src="img/goodyear.jpg">
+                            <div class="price">
+                                90.00 грн.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar sidebar-right">
+                    <h2>Бренды:</h2>
+                    <div class="tyre-brands">
+                        <h3>Шины</h3>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="tyreBrand1">
+                                <label for="tyreBrand1">Бренд 1</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="tyreBrand2">
+                                <label for="tyreBrand2">Бренд 2</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="tyreBrand3">
+                                <label for="tyreBrand3">Бренд 3</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="disc-brands">
+                        <h3>Диски</h3>
+                        <ul>
+                            <li>
+                                <input type="checkbox" id="discBrand1">
+                                <label for="discBrand1">Бренд 1</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="discBrand2">
+                                <label for="discBrand2">Бренд 2</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" id="discBrand3">
+                                <label for="discBrand3">Бренд 3</label>
+                            </li>
+                        </ul>
+                    </div>
+                    <button type="button">ВЫБРАТЬ</button>
+                </div>
+            </div>
+
+            <div class="clients">
+                <img src="img/toyo_logo.jpg">
+            </div>
+        </main>
+
+        <footer>
+            <ul class="menu menu-bottom">
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Доставка</a></li>
+                <li><a href="#">Статьи</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+
+            <div class="credentials">
+                Создание сайта &copy; Global Vision
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
