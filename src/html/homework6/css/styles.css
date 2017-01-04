@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, Helvetica CY, Nimbus Sans L, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    margin: 0 auto;
+    padding: 17px 45px 0;
+    width: 910px;
+}
+
+.contacts {
+    color: #5e696d;
+    font-size: 18px;
+    /*letter-spacing: 0.45px;*/
+    line-height: 28px;
+    text-align: center;
+}
+
+.login-form {
+    background: -webkit-linear-gradient(-90deg, #206988 0%, #114165 59%, #0d3458 84%, #0c3256 100%);
+    background: -moz-linear-gradient(-90deg, #206988 0%, #114165 59%, #0d3458 84%, #0c3256 100%);
+    background: -o-linear-gradient(-90deg, #206988 0%, #114165 59%, #0d3458 84%, #0c3256 100%);
+    background: -ms-linear-gradient(-90deg, #206988 0%, #114165 59%, #0d3458 84%, #0c3256 100%);
+    background: linear-gradient(180deg, #206988 0%, #114165 59%, #0d3458 84%, #0c3256 100%);
+    box-shadow: 1px 3px 3px 0px rgba(150, 150, 150, 0.75);
+    width: 496px;
+    height: 27px;
+    border-radius: 4px;
+    line-height: 27px;
+}
+
+.login-form input {
+    width: 113px;
+    height: 16px;
+    color: #97a2a6;
+    font-size: 10px;
+    font-family: 'Lucida Sans Unicode', Arial, sans-serif;
+}
+
+.sign-in,
+.sign-up {
+    color:  #ffffff;
+}
+
+.forgot-password {
+    text-decoration: underline;
+    color: #bfbfbf;
+}
+
+nav .navigation-top {
+    border: 1px solid #bdc4c7;
+    width: 76px;
+    height: 21px;
+    border-radius: 10px;
+}
+
+.logo {
+    width: 910px;
+    height: 237px;
+}
+
+.bar-top {
+    border: 1px solid #0d1642;
+    background: -webkit-linear-gradient(90deg, #000000 0%, #4c535a 87%, #576068 100%);
+    background: -moz-linear-gradient(90deg, #000000 0%, #4c535a 87%, #576068 100%);
+    background: -o-linear-gradient(90deg, #000000 0%, #4c535a 87%, #576068 100%);
+    background: -ms-linear-gradient(90deg, #000000 0%, #4c535a 87%, #576068 100%);
+    background: linear-gradient(0deg, #000000 0%, #4c535a 87%, #576068 100%);
+    box-shadow: 1px 3px 5px 0px rgba(0, 0, 0, 0.75);
+    width: 910px;
+    height: 33px;
+    border-radius: 5px;
+}
+
+.menu li {
+    display: inline-block;
+}
+
+.menu-top li a {
+    display: block;
+    width: 81px;
+    height: 26px;
+    padding-left: 22px;
+    padding-right: 22px;
+    line-height: 26px;
+    color: #b1bcc0;
+    text-transform: uppercase;
+}
+
+.menu-top {
+    font-size: 14px;
+}
+
+.menu-top li:hover {
+    background: -webkit-linear-gradient(-90deg, #206988 0%, #114165 59%, #0d3458 84%, #0c3256 100%);
+    background: -moz-linear-gradient(-90deg, #206988 0%, #114165 59%, #0d3458 84%, #0c3256 100%);
+    background: -o-linear-gradient(-90deg, #206988 0%, #114165 59%, #0d3458 84%, #0c3256 100%);
+    background: -ms-linear-gradient(-90deg, #206988 0%, #114165 59%, #0d3458 84%, #0c3256 100%);
+    background: linear-gradient(180deg, #206988 0%, #114165 59%, #0d3458 84%, #0c3256 100%);
+    border-radius: 10px;
+}
+
+.order-details {
+    color:  #929b9f;
+    font-size: 11px;
+    /*letter-spacing: 0.44px;*/
+}
+
+.order-totals {
+    color:  #0d5a8f;
+    font-size: 12px;
+    /*letter-spacing: 0.48px;*/
+}
+
+.search {
+    position: relative;
+}
+
+.search h2 {
+    color:  #154467;
+    font-size: 12px;
+    font-weight: bold;
+    /*letter-spacing: 0.3px;*/
+    /*line-height: 28px;*/
+    text-align: left;
+    position: absolute;
+}
+
+.search-auto h2 {
+    text-align: center;
+}
+
+.search-auto h3 {
+    color:  #154468;
+    font-size: 10px;
+    font-weight: bold;
+    /*letter-spacing: 0.25px;*/
+}
+
+.search-auto select {
+    width: 101px;
+}
+
+.search-auto .select-year {
+    width: 58px;
+}
+
+footer {
+    height: 100px;
+    border: 1px solid #242a3c;
+    background-color: #213a4d;
+}
+
+.copyright {
+    color: #7f4740;
+    font-size: 10px;
+    /*letter-spacing: 0.25px;*/
+    /*line-height: 18px;*/
+    text-align: center;
+}

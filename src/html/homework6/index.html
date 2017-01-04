@@ -10,22 +10,25 @@
     <div class="wrapper">
         <header>
             <div class="contacts">
+                <img src="img/icons/Phone.jpg" alt="phone">
                 (044)123-45-67 (044)567-89-10
             </div>
 
             <form class="login-form" action="">
+                <img src="img/icons/person.png" alt="Person">
                 <input type="text" name="login" placeholder="логин">
                 <input type="password" name="password" placeholder="пароль">
-                <a href="#" class="enter">вход</a>
-                <a href="#" class="registration">регистрация</a>
+                <a href="#" class="sign-in">вход</a>
+                &nbsp;|&nbsp;
+                <a href="#" class="sign-up">регистрация</a>
                 <a href="#" class="forgot-password">забыли пароль?</a>
             </form>
 
-            <aside>
-                <a href="#"><img src="img/aaa"></a>
-                <a href="#"><img src="img/aaa"></a>
-                <a href="mailto:info@zazor.com.ua"><img src="img/aaa"></a>
-            </aside>
+            <nav class="navigation-top">
+                <a href="#"><img src="img/icons/Home.png" alt="home"></a>
+                <a href="#"><img src="img/icons/Sitemap.png" alt="sitemap"></a>
+                <a href="mailto:info@zazor.com.ua"><img src="img/icons/email.png" alt="Email"></a>
+            </nav>
         </header>
 
         <main>
@@ -42,44 +45,70 @@
                     <li><a href="#">Контакты</a></li>
                 </ul>
 
-                <a href="#" class="basket"><img src="img/basket.jpg"></a>
-                <span>товаров:</span><span id="itemCounter">0</span>
-                <span>на сумму:</span><span id="totalAmount">0,00 грн.</span>
+                <span class="order-details">
+                    <a href="#" class="basket"><img src="img/basket.jpg" alt="Basket"></a>
+                    <span>товаров:</span><span class="order-totals" id="itemCounter">0</span>
+                    <span>на сумму:</span><span class="order-totals" id="totalAmount">0,00 грн.</span>
+                </span>
             </div>
 
             <div class="search">
                 <form class="search-auto" action="">
                     <div class="form-header">
-                        <span>Диски:</span>
+                        <h3>Диски:</h3>
                         <h2>Поиск по автомобилю</h2>
-                        <span>Шины:</span>
+                        <h3>Шины:</h3>
                     </div>
                     <div>
                         <div>
                             <ul>
-                                <li>Марка <span>авто:</span></li>
-                                <li>Модель <span>автомобиля:</span></li>
-                                <li>Год выпуска <span>автомобиля:</span></li>
-                                <li>Комплектация</li>
+                                <li>
+                                    <span>Марка <span>авто:</span></span>
+                                    <select name="autoMmake"></select>
+                                </li>
+                                <li>
+                                    <span>Модель <span>автомобиля:</span></span>
+                                    <select name="autoModel"></select>
+                                </li>
+                                <li>
+                                    <span>Год выпуска <span>автомобиля:</span></span>
+                                    <select name="autoYear" class="select-year"></select>
+                                </li>
+                                <li>
+                                    <span>Комплектация</span>
+                                    <select name="autoEquipment"></select>
+                                </li>
                             </ul>
                         </div>
                         <div>
-                            <select name="autoMmake"></select>
-                            <select name="autoModel"></select>
-                            <select name="autoYear"></select>
-                            <select name="autoEquipment"></select>
+                            <ul>
+                                <li>
+                                    <span>Марка <span>авто:</span></span>
+                                    <select name="tyreMake"></select>
+                                </li>
+                                <li>
+                                    <span>Модель <span>автомобиля:</span></span>
+                                    <select name="tyreModel"></select>
+                                </li>
+                                <li>
+                                    <span>Год выпуска <span>автомобиля:</span></span>
+                                    <select name="tyreYear" class="select-year"></select>
+                                </li>
+                                <li>
+                                    <span>Комплектация</span>
+                                    <select name="tyreEquipment"></select>
+                                </li>
+                            </ul>
+
+
+
+
                         </div>
                         <div>
-                            Марка <span>авто:</span>
-                            Модель <span>автомобиля:</span>
-                            Год выпуска <span>автомобиля:</span>
-                            Комплектация
-                        </div>
-                        <div>
-                            <select name="tyreMake"></select>
-                            <select name="tyreModel"></select>
-                            <select name="tyreYear"></select>
-                            <select name="tyreEquipment"></select>
+
+
+
+
                         </div>
                     </div>
                     <a href="#">поиск...</a>
@@ -174,7 +203,7 @@
                         <div class="product">
                             <h2>Goodyear</h2>
                             <h3>Ultra Grip Extreme</h3>
-                            <img src="img/goodyear.jpg">
+                            <img src="img/goodyear.jpg" alt="Goodyear tyre">
                             <div class="price">
                                 90.00 грн.
                             </div>
@@ -228,14 +257,16 @@
         </main>
 
         <footer>
-            <ul class="menu menu-bottom">
-                <li><a href="#">О компании</a></li>
-                <li><a href="#">Доставка</a></li>
-                <li><a href="#">Статьи</a></li>
-                <li><a href="#">Контакты</a></li>
-            </ul>
+            <nav>
+                <ul class="menu menu-bottom">
+                    <li><a href="#">О компании</a></li>
+                    <li><a href="#">Доставка</a></li>
+                    <li><a href="#">Статьи</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </nav>
 
-            <div class="credentials">
+            <div class="copyright">
                 Создание сайта &copy; Global Vision
             </div>
         </footer>
