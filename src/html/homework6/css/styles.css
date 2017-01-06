@@ -56,7 +56,7 @@ a {
 
 .sign-in,
 .sign-up {
-    color:  #ffffff;
+    color: #ffffff;
 }
 
 .forgot-password {
@@ -120,48 +120,194 @@ a {
 }
 
 .order-details {
-    color:  #929b9f;
+    color: #929b9f;
     font-size: 11px;
     /*letter-spacing: 0.44px;*/
 }
 
 .order-totals {
-    color:  #0d5a8f;
+    color: #0d5a8f;
     font-size: 12px;
     /*letter-spacing: 0.48px;*/
 }
 
-.search {
-    position: relative;
+.clearfix::after {
+    display: block;
+    content: '';
+    clear: both;
 }
 
-.search h2 {
-    color:  #154467;
+.form-search {
+    position: relative;
+    float: left;
+    border: 1px solid #9c9c9d;
+    box-shadow: 2px 4px 5px 0 rgba(104, 104, 104, .75);
+    border-radius: 15px;
+}
+
+.form-search h2 {
+    color: #154467;
     font-size: 12px;
     font-weight: bold;
     /*letter-spacing: 0.3px;*/
     /*line-height: 28px;*/
     text-align: left;
-    position: absolute;
+}
+
+.form-search span,
+.form-search label {
+    font-family: 'Lucida Sans Unicode';
+}
+
+.form-search {
+    color: #000;
+    font-size: 9px;
+    line-height: 16px;
+}
+
+.form-search label {
+    font-size: 12px;
+}
+
+.form-search a {
+    color:  #154467;
+    font-size: 14px;
+    font-style: italic;
+    text-decoration: underline;
+    text-align: right;
+}
+
+.form-search [type="checkbox"] {
+    margin: 0;
+}
+
+.search-details {
+    color: #77858b;
+    font-size: 8px;
+}
+
+.search-auto {
+    width: 414px;
+    height: 134px;
 }
 
 .search-auto h2 {
-    text-align: center;
+    position: absolute;
+    left: 100px;
 }
 
 .search-auto h3 {
-    color:  #154468;
+    display: inline-block;
+    color: #154468;
     font-size: 10px;
     font-weight: bold;
     /*letter-spacing: 0.25px;*/
 }
 
+select {
+    border: 1px solid #b6b6b6;
+    font-size: 11px;
+}
+
 .search-auto select {
     width: 101px;
+    border: 1px solid #b6b6b6;
 }
 
 .search-auto .select-year {
     width: 58px;
+}
+
+.search-auto li > span {
+    display: inline-block;
+    width: 72px;
+    line-height: 8px;
+}
+
+.search-auto .column {
+    position: relative;
+    float: left;
+    top: 30px;
+    left: 20px;
+    width: 200px;
+}
+
+.search-auto .column select {
+    position: absolute;
+    left: 73px;
+}
+
+.search-tyre {
+    width: 192px;
+    height: 136px;
+}
+
+.search-tyre li {
+    position: relative;
+    left: 45px;
+}
+
+.search-tyre li span {
+    position: absolute;
+    left: -45px;
+}
+
+.search-disc {
+    width: 268px;
+    height: 135px;
+}
+
+.sidebar,
+.products {
+    float: left;
+}
+
+.sidebar {
+    width: 181px;
+}
+
+.sidebar h2 {
+    box-shadow: 1px 3px 3px 0 rgba(150, 150, 150, .75);
+}
+
+.sidebar h2,
+.sidebar h3 {
+    padding-left: 26px;
+    border: 1px solid #79878d;
+    background-color:  #ffffff;
+    line-height: 25px;
+    text-transform: uppercase;
+    border-radius: 15px;
+    font-size: 13px;
+    position: relative;
+}
+
+.sidebar h2::before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 3px;
+    background: url('../img/icons/copy.png') 5px 6px no-repeat, url('../img/icons/circle_blue.png') left no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.sidebar h3::before {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 3px;
+    background: url('../img/icons/circle_white.png') 5px 7px no-repeat, url('../img/icons/circle_blue.png') left no-repeat;
+    width: 25px;
+    height: 25px;
+}
+
+.sidebar-left li {
+    list-style-image: url('../img/icons/marker.png');
+}
+
+.sidebar-left li:hover {
+    list-style-image: url('../img/icons/marker_hover.png');
 }
 
 .select-brands-button {
@@ -176,11 +322,9 @@ a {
     text-transform: uppercase;
     border-radius: 10px;
     font-family: Arial, Helvetica CY, Nimbus Sans L, sans-serif;
-    color:  #e5e9ea;
+    color: #e5e9ea;
     font-size: 11px;
 }
-
-
 
 .products {
     font-family: 'Lucida Sans Unicode';
@@ -194,17 +338,18 @@ a {
 }
 
 .product {
+    float: left;
     width: 140px;
 }
 
 .product h2 {
-    color:  #206988;
+    color: #206988;
     font-size: 15px;
     text-align: center;
 }
 
 .product h3 {
-    color:  #1f2528;
+    color: #1f2528;
     font-size: 13px;
     text-align: center;
 }
@@ -231,8 +376,11 @@ a {
     text-align: center;
 }
 
+.clients {
+    text-align: center;
+}
+
 footer {
-    font-family: Arial, Helvetica CY, Nimbus Sans L, sans-serif;
     height: 100px;
     border: 1px solid #242a3c;
     background-color: #213a4d;
