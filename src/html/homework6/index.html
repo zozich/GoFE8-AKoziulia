@@ -10,24 +10,25 @@
     <div class="wrapper">
         <header>
             <span class="contacts">
-                <img class="phone" src="img/icons/phone.png" alt="phone">
-                (044)123-45-67 (044)567-89-10
+                <img class="phone-icon" src="img/icons/phone.png" alt="phone">
+                <span class="phone-number">(044)123-45-67 (044)567-89-10</span>
             </span>
 
             <form class="login-form" action="">
-                <img src="img/icons/person.png" alt="Person">
+                <img src="img/icons/person.png" class="person-logo" alt="Person">
                 <input type="text" name="login" placeholder="логин">
                 <input type="password" name="password" placeholder="пароль">
-                <a href="#" class="sign-in">вход</a>
-                &nbsp;|&nbsp;
-                <a href="#" class="sign-up">регистрация</a>
+                <span class="auth">
+                    <a href="#" class="sign-in">вход</a>
+                    <a href="#" class="sign-up">регистрация</a>
+                </span>
                 <a href="#" class="forgot-password">забыли пароль?</a>
             </form>
 
             <nav class="navigation-top">
-                <a href="#"><img src="img/icons/home.png" alt="home"></a>
-                <a href="#"><img src="img/icons/sitemap.png" alt="sitemap"></a>
-                <a href="mailto:info@zazor.com.ua"><img src="img/icons/email.png" alt="Email"></a>
+                <a href="#" class="nav-icon"><img src="img/icons/home.png" alt="home"></a>
+                <a href="#" class="nav-icon"><img src="img/icons/sitemap.png" alt="sitemap"></a>
+                <a href="mailto:info@zazor.com.ua" class="nav-icon"><img src="img/icons/email.png" alt="Email"></a>
             </nav>
         </header>
 
@@ -38,17 +39,17 @@
 
             <div class="bar-top">
                 <ul class="menu menu-top">
-                    <li><a href="#">О компании</a></li>
-                    <li><a href="#">Оплата</a></li>
-                    <li><a href="#">Доставка</a></li>
-                    <li><a href="#">Статьи</a></li>
-                    <li><a href="#">Контакты</a></li>
+                    <li><a href="#" class="about">О компани</a></li>
+                    <li><a href="#" class="payment">Оплата</a></li>
+                    <li><a href="#" class="shipment">Доставка</a></li>
+                    <li><a href="#" class="articles">Статьи</a></li>
+                    <li><a href="#" class="contact-us">Контакты</a></li>
                 </ul>
 
                 <span class="order-details">
                     <a href="#" class="basket"><img src="img/icons/basket.png" alt="Basket"></a>
                     <span>товаров:</span><span class="order-totals" id="itemCounter">0</span>
-                    <span>на сумму:</span><span class="order-totals" id="totalAmount">0,00 грн.</span>
+                    <span class="amount">на сумму:</span><span class="order-totals" id="total-amount">0,00 <span class="uah">грн.</span></span>
                 </span>
             </div>
 
@@ -206,7 +207,7 @@
                             <figure>
                                 <img src="img/tyres/goodyear.png" alt="Goodyear tyre">
                                 <figcaption>
-                                    90.00 грн.
+                                    90.00 <span class="uah">грн.</span>
                                 </figcaption>
                             </figure>
                         </div>
@@ -216,7 +217,7 @@
                             <figure>
                                 <img src="img/tyres/nokian.png" alt="Nokian tyre">
                                 <figcaption>
-                                    115.00 грн.
+                                    115.00 <span class="uah">грн.</span>
                                 </figcaption>
                             </figure>
                         </div>
@@ -226,7 +227,7 @@
                             <figure>
                                 <img src="img/tyres/goodyear.png" alt="Goodyear tyre">
                                 <figcaption>
-                                    393.00 грн.
+                                    393.00 <span class="uah">грн.</span>
                                 </figcaption>
                             </figure>
                         </div>
@@ -238,7 +239,7 @@
                             <figure>
                                 <img src="img/tyres/goodyear.png" alt="Goodyear tyre">
                                 <figcaption>
-                                    90.00 грн.
+                                    90.00 <span class="uah">грн.</span>
                                 </figcaption>
                             </figure>
                         </div>
@@ -248,7 +249,7 @@
                             <figure>
                                 <img src="img/tyres/nokian.png" alt="Nokian tyre">
                                 <figcaption>
-                                    115.00 грн.
+                                    115.00 <span class="uah">грн.</span>
                                 </figcaption>
                             </figure>
                         </div>
@@ -258,7 +259,7 @@
                             <figure>
                                 <img src="img/tyres/goodyear.png" alt="Goodyear tyre">
                                 <figcaption>
-                                    393.00 грн.
+                                    393.00 <span class="uah">грн.</span>
                                 </figcaption>
                             </figure>
                         </div>
@@ -270,7 +271,7 @@
                             <figure>
                                 <img src="img/tyres/goodyear.png" alt="Goodyear tyre">
                                 <figcaption>
-                                    90.00 грн.
+                                    90.00 <span class="uah">грн.</span>
                                 </figcaption>
                             </figure>
                         </div>
@@ -280,7 +281,7 @@
                             <figure>
                                 <img src="img/tyres/nokian.png" alt="Nokian tyre">
                                 <figcaption>
-                                    115.00 грн.
+                                    115.00 <span class="uah">грн.</span>
                                 </figcaption>
                             </figure>
                         </div>
@@ -290,7 +291,7 @@
                             <figure>
                                 <img src="img/tyres/goodyear.png" alt="Goodyear tyre">
                                 <figcaption>
-                                    393.00 грн.
+                                    393.00 <span class="uah">грн.</span>
                                 </figcaption>
                             </figure>
                         </div>
