@@ -1,0 +1,80 @@
+.menu {
+    float: right;
+}
+
+.menu ul li {
+    display: inline-block;
+}
+
+.menu li a {
+    display: block;
+    text-transform: uppercase;
+}
+
+main h1 {
+
+}
+
+main h2 {
+    text-transform: uppercase;
+}
+
+main .main-text {
+
+}
+
+.slider ul li {
+    display: inline-block;
+}
+
+article {
+
+}
+
+article h1 {
+    text-transform: uppercase;
+}
+
+article .article-text {
+
+}
+
+article .read-more {
+    text-transform: uppercase;
+}
+
+.credentials h1 {
+    text-transform: uppercase;
+}
+
+.credentials b {
+    color: pink;
+}
+
+.updates h1 {
+    text-transform: uppercase;
+}
+
+.updates .read-more {
+    text-transform: uppercase;
+}
+
+.info-bottom .copyright {
+
+}
+
+.info-bottom text {
+
+}
+
+.recent-comments h1 {
+    text-transform: uppercase;
+}
+
+.news h1 {
+    text-transform: uppercase;
+}
+
+.design {
+    float: right;
+}
