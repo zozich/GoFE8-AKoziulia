@@ -26,33 +26,35 @@
         </div>
     </header>
 
-    <main>
-        <h2>Cadastre-se</h2>
-        <form name="loginForm" action="">
-            <div class="form-container">
-                <div>
-                    <a href="#" class="facebook-login"><b>Log In</b> with <b>Facebook</b></a>
+    <div class="wrapper">
+        <main>
+            <h2>Cadastre-se</h2>
+            <form name="loginForm" action="">
+                <div class="form-container">
+                    <div>
+                        <a href="#" class="facebook-login"><b>Log In</b> with <b>Facebook</b></a>
+                    </div>
+
+                    <div class="form-element divider">OU</div>
+                    <input class="form-element text-input" type="text" placeholder="First Name" required>
+                    <input class="form-element text-input" type="text" placeholder="Last Name" required>
+                    <input class="form-element text-input" type="email" placeholder="Email Address" required>
+                    <input class="form-element text-input" type="password" placeholder="Choose Password" required>
+                    <input class="form-element text-input" type="password" placeholder="Password Confirm" required>
+                    <div class="form-element">
+                        <input type="checkbox" id="send-updates">
+                        <label for="send-updates">Send me Youbike updates and tips</label>
+                    </div>
+
+                    <button class="form-element submit" type="submit">Create my Account</button>
                 </div>
 
-                <div class="form-element divider">OU</div>
-                <input class="form-element text-input" type="text" placeholder="First Name" required>
-                <input class="form-element text-input" type="text" placeholder="Last Name" required>
-                <input class="form-element text-input" type="email" placeholder="Email Address" required>
-                <input class="form-element text-input" type="password" placeholder="Choose Password" required>
-                <input class="form-element text-input" type="password" placeholder="Password Confirm" required>
-                <div class="form-element">
-                    <input type="checkbox" id="send-updates">
-                    <label for="send-updates">Send me Youbike updates and tips</label>
+                <div class="form-footer">
+                    By clicking the button above, you agree to the Terms of Service<br>
+                    <a href="#">View our Privacy Policy</a>
                 </div>
-
-                <button class="form-element submit" type="submit">Create my Account</button>
-            </div>
-
-            <div class="form-footer">
-                By clicking the button above, you agree to the Terms of Service<br>
-                <a href="#">View our Privacy Policy</a>
-            </div>
-        </form>
-    </main>
+            </form>
+        </main>
+    </div>
 </body>
 </html>
