@@ -1,25 +1,29 @@
-.menu {
+.uppercase {
+    text-transform: uppercase;
+}
+
+.menu__top {
     float: right;
 }
 
-.menu ul li {
+.menu__item {
     display: inline-block;
 }
 
-.menu li a {
+.menu__link {
     display: block;
     text-transform: uppercase;
 }
 
-main h1 {
+.main__header {
 
 }
 
-main h2 {
-    text-transform: uppercase;
+.main__subheader {
+
 }
 
-main .main-text {
+.main__text {
 
 }
 
@@ -31,31 +35,27 @@ article {
 
 }
 
-article h1 {
+.article__header {
     text-transform: uppercase;
 }
 
-article .article-text {
+.article__text {
 
 }
 
-article .read-more {
+.read-more {
     text-transform: uppercase;
 }
 
-.credentials h1 {
+.testimonials__header {
     text-transform: uppercase;
 }
 
-.credentials b {
+.testimonials b {
     color: pink;
 }
 
-.updates h1 {
-    text-transform: uppercase;
-}
-
-.updates .read-more {
+.updates__header {
     text-transform: uppercase;
 }
 
@@ -68,10 +68,6 @@ article .read-more {
 }
 
 .recent-comments h1 {
-    text-transform: uppercase;
-}
-
-.news h1 {
     text-transform: uppercase;
 }
 
