@@ -8,34 +8,34 @@
 </head>
 <body>
     <div class="wrapper wrapper__header">
-        <div class="content">
-            <header class="clearfix">
-                <div class="menu menu__top">
-                    <ul>
-                        <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#">About</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#">Blog</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#">Products</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#">Lorem ipsum</a></li>
-                        <li class="menu__item"><a class="menu__link" href="#">Dolor sit amet</a></li>
-                    </ul>
-                </div>
-                <div class="logo uppercase">
-                    <a class="logo--light" href="#">Pingbull<b class="logo--pink">er</b></a>
-                </div>
-            </header>
+        <header class="content clearfix">
+            <div class="menu menu__top">
+                <ul>
+                    <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">About</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Blog</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Products</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Lorem ipsum</a></li>
+                    <li class="menu__item"><a class="menu__link" href="#">Dolor sit amet</a></li>
+                </ul>
+            </div>
+            <div class="logo uppercase">
+                <a class="logo--light" href="#">Pingbull<b class="logo--pink">er</b></a>
+            </div>
+        </header>
 
-            <main>
-                <h1 class="main__header">Lorem Ipsum Dolor</h1>
-                <h2 class="main__subheader uppercase">It will make all of your dreams come true</h2>
-                <div class="text main__text">
-                    Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et
-                    auctor
-                    turpis
-                    ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus id semper. In odio
-                    nunc,
-                    imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam a tempus lectus
-                    lobortis.
+
+        <div class="wrapper wrapper__main">
+            <main class="content">
+                <div class="main__description">
+                    <h1 class="main__header">Lorem Ipsum Dolor</h1>
+                    <h2 class="main__sub-header uppercase">It will make all of your dreams come true</h2>
+                    <div class="text main__text">
+                        Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et
+                        auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus
+                        id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et felis aliquam
+                        a tempus lectus lobortis.
+                    </div>
                 </div>
 
                 <div class="play-song">
@@ -45,21 +45,24 @@
                     <div class="play-song__play">
                         <img src="img/play_icon.png" alt="Play">
                     </div>
-                    <div class="slider play-song__Slider">
-                        <ul>
-                            <li><a href="#"></a></li>
-                            <li><a href="#" class="selected"></a></li>
-                            <li><a href="#"></a></li>
-                            <li><a href="#"></a></li>
-                        </ul>
-                    </div>
                 </div>
             </main>
+        </div>
+
+        <div class="content">
+            <div class="slider main-slider">
+                <ul>
+                    <li class="slider__item"></li>
+                    <li class="slider__item slider__item--selected"></li>
+                    <li class="slider__item"></li>
+                    <li class="slider__item"></li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <div class="wrapper wrapper__articles">
-        <div class="content article">
+        <div class="content articles clearfix">
             <article class="article__settings">
                 <h1 class="article__header">About our company</h1>
                 <div class="text article__text">
@@ -67,8 +70,8 @@
                     posuere.
                     Pellentesque vel lacus eget nisi convallis auctor. Nam vitae
                 </div>
-                <div class="read-more read-more--light">
-                    Read more
+                <div class="read-more">
+                    <a class="read-more__link" href="#">Read more</a>
                 </div>
             </article>
 
@@ -79,8 +82,8 @@
                     posuere.
                     Pellentesque vel lacus eget nisi convallis auctor. Nam vitae
                 </div>
-                <div class="read-more read-more--light">
-                    Read more
+                <div class="read-more">
+                    <a class="read-more__link" href="#">Read more</a>
                 </div>
             </article>
 
@@ -91,8 +94,8 @@
                     posuere.
                     Pellentesque vel lacus eget nisi convallis auctor. Nam vitae
                 </div>
-                <div class="read-more read-more--light">
-                    Read more
+                <div class="read-more">
+                    <a class="read-more__link" href="#">Read more</a>
                 </div>
             </article>
         </div>
@@ -140,7 +143,7 @@
                     </div>
                 </div>
                 <div class="read-more read-more--dark">
-                    Read more here
+                    <a class="read-more__link" href="#">Read more here</a>
                 </div>
             </div>
         </div>
@@ -149,7 +152,7 @@
     <div class="wrapper wrapper__logos">
         <div class="content">
             <div class="logos">
-                <img src="img/logos/logos.png">
+                <img src="img/logos/logos.png" alt="Our partners">
             </div>
         </div>
     </div>
