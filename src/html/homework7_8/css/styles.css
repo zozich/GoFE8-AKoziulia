@@ -528,7 +528,7 @@ article:before {
     font-weight: bold;
 }
 
-@media (max-width: 961px) {
+@media (max-width: 959px) {
     .logo--top {
         float: none;
     }
@@ -568,7 +568,7 @@ article:before {
     }
 }
 
-@media (max-width: 769px) {
+@media (max-width: 767px) {
     .hide-less-768 {
         display: none;
     }
@@ -602,7 +602,7 @@ article:before {
     }
 }
 
-@media (max-width: 481px) {
+@media (max-width: 479px) {
     .hide-less-480 {
         display: none;
     }
