@@ -140,8 +140,7 @@ main {
 
 .main__description {
     padding-top: 79px;
-    width: 60%;
-    margin-right: 440px;
+    width: 50%;
     text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
 }
 
@@ -170,7 +169,6 @@ main {
     float: right;
     width: 266px;
     margin-top: -17px;
-    margin-left: 170px;
     z-index: 10;
 }
 
@@ -187,8 +185,14 @@ main {
     left: -73px;
     height: 268px;
     width: 100px;
-    content: url('../img/iphone4_blur.png');
+    content: '';
+    background: url('../img/iphone4_blur.png') no-repeat;
     z-index: -10;
+}
+
+.play-song__img {
+    width: 197px;
+    height: 434px;
 }
 
 .main-slider {
@@ -573,8 +577,17 @@ article:before {
         display: none;
     }
 
+    .menu--top,
+    .logo--top {
+        text-align: center;
+    }
+
     main {
         height: 246px;
+    }
+
+    .main__description {
+        width: 60%;
     }
 
     .main__header {
@@ -583,6 +596,33 @@ article:before {
 
     .main__sub-header {
         font-size: 18px;
+    }
+
+    .play-song {
+        width: 30%;
+    }
+
+    .play-song__img {
+        width: 132px;
+        height: 304px;
+    }
+
+    .play-song:before {
+        height: 190px;
+        width: 85px;
+        top: 52px;
+        left: -51px;
+        background-size: 85px, 190px;
+    }
+
+    .play-song__play {
+        top: 103px;
+        left: 42px;
+    }
+
+    .play-song__play__img {
+        width: 53px;
+        height: 53px;
     }
 
     .article__header {
