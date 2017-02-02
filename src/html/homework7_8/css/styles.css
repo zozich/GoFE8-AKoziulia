@@ -76,7 +76,7 @@ header {
 .logo {
     font-size: 48px;
     text-transform: uppercase;
-    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .3);
 }
 
 .logo--top {
@@ -116,7 +116,7 @@ header {
     font-size: 24px;
     color: #fff;
     line-height: 40px;
-    text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.4);
+    text-shadow: 1px 2px 2px rgba(0, 0, 0, .4);
 }
 
 .menu__link:hover:after {
@@ -131,7 +131,7 @@ header {
 }
 
 .wrapper__main {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, .2);
 }
 
 main {
@@ -141,7 +141,7 @@ main {
 .main__description {
     padding-top: 79px;
     width: 50%;
-    text-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 2px 2px rgba(0, 0, 0, .3);
 }
 
 .main__header {
@@ -182,7 +182,7 @@ main {
     position: absolute;
     display: block;
     top: 78px;
-    left: -73px;
+    left: -77px;
     height: 268px;
     width: 100px;
     content: '';
@@ -195,12 +195,12 @@ main {
     height: 434px;
 }
 
-.main-slider {
+.header__slider {
     display: inline-block;
     position: relative;
     height: 168px;
     top: 93px;
-    left: 708px;
+    left: 73.7%;
 }
 
 .slider__item {
@@ -292,7 +292,7 @@ article:before {
 }
 
 .read-more__link:hover {
-    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 8px rgba(255, 255, 255, .8);
 }
 
 .wrapper__updates {
@@ -301,14 +301,15 @@ article:before {
     border-top: 1px solid #0d151b;
     border-bottom: 1px solid #e6e6e6;
     background: #f9f9f9;
+    overflow: hidden;
 }
 
 .testimonials {
     position: relative;
+    /*box-sizing: border-box;*/
     margin-left: 2.6%;
     padding: 30px 38px;
-    width: 36.5%;
-    height: 228px;
+    width: 44.5%;
     background: url('../img/background_testimonials.png') no-repeat;
     text-shadow: 0 1px 0 #fff;
 }
@@ -337,6 +338,9 @@ article:before {
     color:  #454545;
     font-size: 16px;
     line-height: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 192px;
 }
 
 .testimonials__slider {
@@ -359,6 +363,7 @@ article:before {
 
 .updates {
     margin-left: 6.25%;
+    box-sizing: border-box;
     width: 45.8%;
     text-shadow: 0 1px 0 #ffffff;
     white-space: nowrap;
@@ -383,6 +388,8 @@ article:before {
     color:  #454545;
     font-size: 16px;
     line-height: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .updates__update {
@@ -452,7 +459,7 @@ article:before {
 
 .wrapper__info-bottom {
     padding-top: 97px;
-    padding-bottom: 66px;
+    padding-bottom: 16px;
     border-top: 1px solid #fefefe;
     border-bottom: 1px solid #fefefe;
     background: #ececec;
@@ -462,6 +469,7 @@ article:before {
 .wrapper__info-bottom .column {
     width: 29.5%;
     margin-right: 5.7%;
+    margin-bottom: 50px;
 }
 
 .wrapper__info-bottom .column:last-child {
@@ -563,6 +571,11 @@ article:before {
         font-size: 16px;
     }
 
+    .header__slider {
+        top: 40px;
+    }
+
+
     .info-bottom__header {
         font-size: 24px;
     }
@@ -577,10 +590,37 @@ article:before {
         display: none;
     }
 
+    .column {
+        width: 100% !important;
+    }
+
+    header {
+        padding-bottom: 60px;
+    }
+
     .menu--top,
     .logo--top {
+        display: block;
+        margin: 0 auto;
         text-align: center;
+        width: 244px;
     }
+
+    .menu--top {
+        position: relative;
+        padding-top: 25px;
+    }
+
+    .menu__item {
+        padding-right: 0;
+    }
+
+    .menu__item:hover ~ .menu__item {
+        position: absolute;
+        display: block;
+    }
+    /* FIXME: Fix menu */
+
 
     main {
         height: 246px;
@@ -625,16 +665,29 @@ article:before {
         height: 53px;
     }
 
+    .header__slider {
+        display: block;
+        margin: 22px auto 0 auto;
+        padding-bottom: 40px;
+        width: 100px;
+        position: inherit;
+        height: auto;
+    }
+
     .article__header {
         font-size: 24px;
+    }
+
+    .wrapper__updates .column {
+        width: 81% !important;
     }
 
     .testimonials__header {
         font-size: 24px;
     }
 
-    .column {
-        width: 100%;
+    .testimonials {
+        background-size: 100% 100%;
     }
 
     .design {
@@ -645,5 +698,27 @@ article:before {
 @media (max-width: 479px) {
     .hide-less-480 {
         display: none;
+    }
+
+    .wrapper__main {
+        background: none;
+    }
+
+    main {
+        height: 206px;
+    }
+
+    .main__description {
+        width: 100%;
+        text-align: center;
+    }
+
+    .main__sub-header {
+        padding-left: 47px;
+    }
+
+    .design {
+        float: none;
+        text-align: center;
     }
 }
