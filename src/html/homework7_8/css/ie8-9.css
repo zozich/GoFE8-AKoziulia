@@ -1,0 +1,26 @@
+.logo--pink {
+    /*opa*/
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#745083', endColorstr='#33263a',GradientType=0 )";
+}
+
+.menu__link:hover:after {
+    width: 107%;
+}
+
+.wrapper__main {
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#1f000000', endColorstr='#1f000000')";
+}
+
+.wrapper__articles {
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#745083', endColorstr='#322539',GradientType=0 )";
+}
+
+.updates__photo {
+    behavior: url(css/css3pie/PIE.htc);
+}
+
+@media (max-width: 767px) {
+    .menu--top:hover {
+        behavior: url(css/css3pie/PIE.htc);
+    }
+}

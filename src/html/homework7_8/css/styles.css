@@ -65,6 +65,9 @@ a {
 
 .wrapper__header {
     background: url('../img/background.jpg') top center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
 }
 
@@ -403,31 +406,15 @@ article:before {
     margin-bottom: 0;
 }
 
-.updates__update:before {
-    display: block;
+.updates__photo {
     position: absolute;
     top: 0;
     left: -65px;
     width: 49px;
     height: 49px;
-    /* FIXME: Not working :( */
-    -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
     border-radius: 50%;
-    behavior: url(/css/css3pie/PIE.htc);
-    content: '';
-}
-
-.updates__update1:before {
-    background: url('../img/updates/update_post_1.jpg');
-}
-
-.updates__update2:before {
-    background: url('../img/updates/update_post_2.jpg');
-}
-
-.updates__update3:before {
-    background: url('../img/updates/update_post_3.jpg');
 }
 
 .updates__read-more {
@@ -515,6 +502,9 @@ article:before {
     padding-bottom: 29px;
     border-top: 1px solid #d8d8d8;
     background: url('../img/background_footer.jpg') top center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
     text-shadow: 1px 2px 2px rgba(0, 0, 0, .4);
 }
@@ -628,7 +618,6 @@ article:before {
         background: rgba(54, 41, 62, .9);
         box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .2);
         z-index: 20;
-        behavior: url('css3pie/PIE.htc');
     }
 
     .menu--top:hover .menu__item {
@@ -650,7 +639,7 @@ article:before {
         top: 41px;
     }
 
-    main {
+    .wrapper__main {
         height: 246px;
     }
 

@@ -11,12 +11,15 @@
         'article aside footer header nav section time'.replace(/\w+/g,function(n){document.createElement(n)});
     </script>
     <![endif]-->
+    <!--[if lt IE 10]>
+    <link rel="stylesheet" href="css/ie8-9.css">
+    <![endif]-->
 </head>
 <body>
     <div class="wrapper wrapper__header">
         <header class="content clearfix">
             <div class="logo logo--top">
-                <a class="logo--light" href="#">Pingbull<b class="logo--pink">er</b></a>
+                <a class="logo--light" href="#">Pingbull<img src="img/logo-er.png"></a>
             </div>
             <div class="menu menu--top">
                 <ul>
@@ -132,18 +135,27 @@
                 <h1 class="updates__header uppercase">Recent updates</h1>
                 <div class="updates__update updates__update1">
                     <h2 class="text updates__sub-header">Nunc turpis neque feugiat eget </h2>
+                    <div>
+                        <img class="updates__photo" src="img/updates/update_post_1.jpg" alt="Update 1">
+                    </div>
                     <div class="text updates__text">
                         Posted by Admin on March 13 2012 in Recent News
                     </div>
                 </div>
                 <div class="updates__update updates__update2">
                     <h2 class="text updates__sub-header">Nunc turpis neque feugiat eget </h2>
+                    <div>
+                        <img class="updates__photo" src="img/updates/update_post_2.jpg" alt="Update 2">
+                    </div>
                     <div class="text updates__text">
                         Posted by Admin on March 13 2012 in Category
                     </div>
                 </div>
                 <div class="updates__update updates__update3">
                     <h2 class="text updates__sub-header">Nunc turpis neque feugiat eget </h2>
+                    <div>
+                        <img class="updates__photo" src="img/updates/update_post_3.jpg" alt="Update 3">
+                    </div>
                     <div class="text updates__text">
                         Posted by Admin on March 13 2012 in Blog Updates
                     </div>
