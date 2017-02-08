@@ -132,9 +132,6 @@ header {
 
 .wrapper__main {
     background-color: rgba(0, 0, 0, .2);
-}
-
-main {
     height: 400px;
 }
 
@@ -234,7 +231,7 @@ main {
 article {
     position: relative;
     width: 29.5%;
-    margin-right: 5.7%;
+    margin-left: 5.7%;
     margin-bottom: 68px;
     padding-left: 65px;
     float: left;
@@ -242,8 +239,8 @@ article {
     box-sizing: border-box;
 }
 
-article:last-child {
-    margin-right: 0;
+article:first-child {
+    margin-left: 0;
 }
 
 article:before {
@@ -413,8 +410,11 @@ article:before {
     left: -65px;
     width: 49px;
     height: 49px;
+    /* FIXME: Not working :( */
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
     border-radius: 50%;
-    /* FIXME: http://css3pie.com/ */
+    behavior: url(/css/css3pie/PIE.htc);
     content: '';
 }
 
@@ -471,12 +471,12 @@ article:before {
 
 .wrapper__info-bottom .column {
     width: 29.5%;
-    margin-right: 5.7%;
+    margin-left: 5.7%;
     margin-bottom: 50px;
 }
 
-.wrapper__info-bottom .column:last-child {
-    margin-right: 0;
+.wrapper__info-bottom .column:first-child {
+    margin-left: 0;
 }
 
 .logo--dark {
@@ -622,10 +622,13 @@ article:before {
         height: 257px;
         transition: .5s all;
         border: 1px solid #051116;
+        -webkit-border-radius: 8px;
+        -moz-border-radius: 8px;
         border-radius: 8px;
         background: rgba(54, 41, 62, .9);
         box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .2);
         z-index: 20;
+        behavior: url('css3pie/PIE.htc');
     }
 
     .menu--top:hover .menu__item {
