@@ -1,8 +1,3 @@
-.logo--pink {
-    /*opa*/
-    -ms-filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#745083', endColorstr='#33263a',GradientType=0 )";
-}
-
 .menu__link:hover:after {
     width: 107%;
 }
