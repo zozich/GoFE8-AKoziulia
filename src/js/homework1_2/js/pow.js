@@ -1,11 +1,7 @@
 function myPow(num, power) {
-    var result = num;
+    var result = 1;
 
-    if (power == 0) {
-        result = 1;
-    }
-
-    for (var i = 1; i < power; i++) {
+    for (var i = 0; i < power; i++) {
         result *= num;
     }
 
