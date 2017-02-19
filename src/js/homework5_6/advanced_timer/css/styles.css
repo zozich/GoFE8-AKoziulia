@@ -1,0 +1,56 @@
+.wrapper-outer {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    overflow: auto;
+}
+
+.wrapper-inner {
+    margin: 100px auto;
+    width: 800px;
+    text-align: center;
+}
+
+.timer {
+    color: #f00;
+    font: 100px bold;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.divider::after {
+    position: absolute;
+    content: ':';
+}
+
+.divider-dot::after {
+    position: absolute;
+    content: '.';
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #eee;
+    color: #000;
+    font: 40px bold;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.results {
+    margin-top: 20px;
+}
+
+.result {
+    display: block;
+    color: #aaa;
+    font: 40px bold;
+}

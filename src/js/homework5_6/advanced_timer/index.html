@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="wrapper-outer">
+        <div class="wrapper-inner">
+            <div class="timer">
+                <label id="hours" class="divider">00</label>
+                <label id="minutes" class="divider">00</label>
+                <label id="seconds" class="divider-dot">00</label>
+                <label id="milliseconds">000</label>
+            </div>
+            <div class="controls">
+                <button type="button" id="start" class="button">Start</button>
+                <button type="button" id="stopButton" class="button hidden">Stop</button>
+                <button type="button" id="split" class="button">Split</button>
+                <button type="button" id="reset" class="button">Reset</button>
+            </div>
+            <div class="results" id="results"></div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
