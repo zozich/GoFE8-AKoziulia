@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stopwatch</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="timer border">
+            <div class="main-time">
+                <label id="hours" class="divider">00</label>
+                <label id="minutes" class="divider">00</label>
+                <label id="seconds">00</label>
+            </div>
+            <div class="additional-time">
+                <label id="milliseconds">0</label>
+            </div>
+        </div>
+        <div class="controls">
+            <button type="button" id="start" class="border button start">Start</button>
+            <button type="button" id="pause" class="border button pause hidden">Pause</button>
+            <button type="button" id="cont" class="border button start hidden">Cont..</button>
+            <button type="button" id="clear" class="border button clear">Clear</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>

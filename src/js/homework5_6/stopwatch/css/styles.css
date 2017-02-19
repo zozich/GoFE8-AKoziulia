@@ -1,0 +1,68 @@
+.wrapper {
+    margin: 50px auto;
+    width: 100%;
+    max-width: 800px;
+}
+
+.border {
+    border: 15px solid #000;
+}
+
+.divider {
+    position: relative;
+}
+
+.divider::after {
+    display: block;
+    content: ':';
+    position: absolute;
+    top: -20px;
+    left: 100%;
+    width: 200px;
+    height: 200px;
+}
+
+.timer {
+    border-radius: 80px;
+    padding: 0 30px;
+}
+
+.main-time {
+    font: 200px bold;
+}
+
+.additional-time {
+    font: 40px bold;
+    text-align: right;
+}
+
+#milliseconds {
+    position: relative;
+    top: -20px;
+    margin-right: 52px;
+}
+
+.button {
+    width: 300px;
+    margin-top: 50px;
+    font: 100px bold;
+    border-radius: 40px;
+    cursor: pointer;
+}
+
+.start {
+    background: green;
+}
+
+.clear {
+    background: red;
+    float: right;
+}
+
+.pause {
+    background: blue;
+}
+
+.hidden {
+    display: none;
+}
