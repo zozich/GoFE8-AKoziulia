@@ -1,0 +1,62 @@
+.wrapper {
+    width: 750px;
+    margin: 100px auto 0;
+    border: 1px solid #000;
+}
+
+.tabs li {
+    display: inline-block;
+    border: 1px solid #0d5a8f;
+}
+
+.tabs li a {
+    display: block;
+    padding: 10px 20px;
+    color: #000;
+    text-decoration: none;
+}
+
+.tabs li a:hover {
+    background: #eee;
+    transition: .2s all;
+}
+
+.tabs li a.selected {
+    background: #a9d9d2;
+}
+
+.content {
+    height: 300px;
+    margin: 20px;
+}
+
+.content > div {
+    display: none;
+}
+
+.content > div:first-child {
+    display: block;
+}
+
+.input-group {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-group label {
+    display: inline-block;
+    width: 80px;
+}
+
+.content input {
+    width: 300px;
+}
+
+.help {
+    position: absolute;
+    display: none;
+    top: 0;
+    left: 400px;
+    padding: 5px;
+    box-shadow: 1px 1px 1px 1px #bbb;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <ul class="tabs">
+                <li><a class="selected" href="#" data-tab-id="tab1">Input form</a></li>
+                <li><a href="#" data-tab-id="tab2">Lorem ipsum</a></li>
+                <li><a href="#" data-tab-id="tab3">Dolor sit amet</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <div id="tab1" style="position: relative">
+                <div class="input-group">
+                    <label>First name</label>
+                    <input type="text" class="hover-help" placeholder="Name">
+                    <em class="help">Enter your name</em>
+                </div>
+                <div class="input-group">
+                    <label>Last name</label>
+                    <input type="text" class="hover-help" placeholder="Surname">
+                    <em class="help">Enter your surname</em>
+                </div>
+                <div class="input-group">
+                    <label>Email</label>
+                    <input type="email" class="hover-help" placeholder="Email">
+                    <em class="help">Enter your email</em>
+                </div>
+                <button type="button" id="show-help">Show help</button>
+            </div>
+
+            <div id="tab2">
+                Semper sollicitudin gravida eget, vestibulum sit amet sapien. Nunc dignissim tincidunt est, et
+                auctor turpis ornare a. Nam venenatis hendrerit est at volutpat. Morbi elementum euismod lacus
+                id semper. In odio nunc, imperdiet eget aliquam quis, euismod id lectus. Nulla interdum arcu et
+                felis aliquam a tempus lectus lobortis.
+            </div>
+
+            <div id="tab3">
+                Nunc turpis neque, feugiat eget eleifend et, lacinia non neque. Praesent rhoncus ultrices posuere.
+                Pellentesque vel lacus eget nisi convallis auctor. Nam vitae lectus eu libero pellentesque pulvinar
+                urna risus, mattis pulvinar bibendum in, venenatis quis neque. Mauris nec metus ultricies erat
+                consequat dignissim non eu nisl.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
