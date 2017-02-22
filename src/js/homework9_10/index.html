@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tabs</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="lib/jquery_selectbox/jquery.selectBox.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+    <script src="lib/jcarousel/jquery.jcarousel.min.js"></script>
+    <script src="lib/jquery_selectbox/jquery.selectBox.min.js"></script>
+    <script src="lib/jquery_color/jquery.color-2.1.2.min.js"></script>
+    <script src="lib/bootstrap-checkbox-master/dist/js/bootstrap-checkbox.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <h3>jQuery menu toggle</h3>
+            <ul class="menu">
+                <li class="menu-item"><a href="#" class="menu-link">Nav 1</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Nav 2</a></li>
+                <li class="menu-item dropdown">
+                    <a href="#" class="menu-link">Nav 3</a>
+                    <ul class="submenu">
+                        <li class="menu-item"><a href="#" class="menu-link">Nav 3.1</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Nav 3.2</a></li>
+                        <li class="menu-item"><a href="#" class="menu-link">Nav 3.3</a></li>
+                        <li class="menu-item dropdown">
+                            <a href="#" class="menu-link">Nav 3.4</a>
+                            <ul class="submenu submenu-nested">
+                                <li class="menu-item"><a href="#" class="menu-link">Nav 3.4.1</a></li>
+                                <li class="menu-item dropdown">
+                                    <a href="#" class="menu-link">Nav 3.4.2</a>
+                                    <ul class="submenu submenu-nested">
+                                        <li class="menu-item"><a href="#" class="menu-link">Nav 3.4.2.1</a></li>
+                                        <li class="menu-item"><a href="#" class="menu-link">Nav 3.4.2.2</a></li>
+                                        <li class="menu-item"><a href="#" class="menu-link">Nav 3.4.2.3</a></li>
+                                        <li class="menu-item"><a href="#" class="menu-link">Nav 3.4.2.4</a></li>
+                                        <li class="menu-item"><a href="#" class="menu-link">Nav 3.4.2.5</a></li>
+                                        </ul>
+                                </li>
+                                <li class="menu-item"><a href="#" class="menu-link">Nav 3.4.3</a></li>
+                                <li class="menu-item"><a href="#" class="menu-link">Nav 3.4.4</a></li>
+                                <li class="menu-item"><a href="#" class="menu-link">Nav 3.4.5</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-item"><a href="#" class="menu-link">Nav 3.5</a></li>
+                    </ul>
+                </li>
+                <li class="menu-item"><a href="#" class="menu-link">Nav 4</a></li>
+                <li class="menu-item"><a href="#" class="menu-link">Nav 5</a></li>
+            </ul>
+        </nav>
+
+        <h3>Carousel</h3>
+            <div class="jcarousel-wrapper">
+                <div class="jcarousel">
+                    <ul>
+                        <li><img src="img/Thanksgiving.jpg" width="600" height="400" alt=""></li>
+                        <li><img src="img/Small-Earth.jpg" width="600" height="400" alt=""></li>
+                        <li><img src="img/Small%20Blue%20Flowers.jpg" width="600" height="400" alt=""></li>
+                    </ul>
+                </div>
+
+                <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+                <a href="#" class="jcarousel-control-next">&rsaquo;</a>
+
+                <p class="jcarousel-pagination">
+
+                </p>
+            </div>
+
+
+        <div class="select-wrapper">
+            <h3>jQuery plugin select</h3>
+            <label for="multi-select-control">Select programming languages you know</label>
+            <select id="multi-select-control" name="multi-select-control" multiple="multiple">
+                <option value="1" selected="selected">Java</option>
+                <option value="2">Javascript</option>
+                <option value="3">C</option>
+                <option value="4">C++</option>
+                <option value="5">C#</option>
+            </select>
+        </div>
+
+        <div class="checkbox-wrapper">
+            <h3>jQuery plugin checkboxes</h3>
+            <label for="checkbox-1">Checkbox 1</label>
+            <input type="checkbox" class="bootstrap-checkbox" id="checkbox-1">
+            <label for="checkbox-2">Checkbox 2</label>
+            <input type="checkbox" class="bootstrap-checkbox" id="checkbox-2">
+            <label for="checkbox-3">Checkbox 3</label>
+            <input type="checkbox" class="bootstrap-checkbox" id="checkbox-3">
+        </div>
+
+        <div class="checkbox-wrapper">
+            <h3>CSS checkboxes</h3>
+            <input type="checkbox" class="css-checkbox" id="css-checkbox-1">
+            <label for="css-checkbox-1" class="css-checkbox-label">Checkbox 1</label>
+            <input type="checkbox" class="css-checkbox" id="css-checkbox-2">
+            <label for="css-checkbox-2" class="css-checkbox-label">Checkbox 2</label>
+            <input type="checkbox" class="css-checkbox" id="css-checkbox-3">
+            <label for="css-checkbox-3" class="css-checkbox-label">Checkbox 3</label>
+        </div>
+    </div>
+</body>
+</html>
