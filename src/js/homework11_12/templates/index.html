@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Templates</title>
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+    <script src="lib/lodash/lodash.min.js"></script>
+    <script src="lib/resig/resig.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <script type="text/html" id="motivation_block">
+        <div class="content-block">
+            <h2><%= title %></h2>
+            <div class="motivation-list">
+                <ul>
+                    <% for (var i = 0; i < items.length; i++) { %>
+                    <li><%= items[i] %></li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/html" id="text_block">
+        <div class="content-block">
+            <h2><%- title %></h2>
+            <div class="content-text"><%- text %></div>
+        </div>
+    </script>
+
+    <div class="content">
+        <div class="content-block">
+            <div class="photo">
+                <img src="img/my_photo.jpg" alt="My photo">
+            </div>
+            <div class="institution-info">
+                Студент курса GoFE8
+            </div>
+        </div>
+
+        <div class="content-block" id="vk_info">
+            <h2>Мой профиль ВКонтакте:</h2>
+            <div class="content-text">
+                <a href="https://vk.com/id4358421" target="_blank">vk.com</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
