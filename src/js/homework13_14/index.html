@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="lib/bootstrap-3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+    <script src="lib/lodash/lodash.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <script type="text/html" id="header_template">
+        <h1 class="header"><%= title %></h1>
+    </script>
+
+    <script type="text/html" id="question_template">
+        <% for (var i = 0; i < questions.length; i++) { %>
+        <div class="row">
+            <h3><%= i + 1 + ". " + questions[i].title %></h3>
+            <% for (var j = 0; j < questions[i].answers.length; j++) { %>
+            <input type="checkbox" id="<%= questions[i].answers[j].id %>" class="col-xs-1">
+            <label class="label control-label col-xs-11" for="<%= questions[i].answers[j].id %>">
+            <%= questions[i].answers[j].text %>
+            </label>
+            <% } %>
+        </div>
+        <% } %>
+    </script>
+
+    <script type="text/html" id="submit_template">
+        <div class="text-center">
+            <button type="button" class="btn btn-primary pagination-centered" id="submit"><%= submitTitle %></button>
+        </div>
+    </script>
+
+    <div class="wrapper"></div>
+</body>
+</html>
