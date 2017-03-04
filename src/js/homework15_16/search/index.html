@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coogle search</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+    <script src="lib/lodash/lodash.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <script type="text/html" id="articles_template">
+        <% for(var i = 0; i < articles.length; i++) { %>
+        <% var article = articles[i] %>
+        <article>
+            <h3>
+                <a href="<%= article.href %>"><%= article.title %></a></h3>
+            <div class="link"><%= article.href %></div>
+            <div class="text"><%= article.text %></div>
+        </article>
+        <% } %>
+    </script>
+
+    <div class="wrapper">
+        <header>
+            <div class="content">
+                <div class="logo">
+                    <a href="#"><img class="logo_img" src="img/coogle_logo.png" alt="Coogle search"></a>
+                </div>
+
+                <form name="search_form" class="search_form" onsubmit="return searchQuery();">
+                    <input type="text" placeholder="Type text here" id="search-input">
+                    <button type="submit" id="form_submit">Search</button>
+                </form>
+            </div>
+        </header>
+
+        <div class="content">
+            <main>
+                <div id="search_results"></div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
