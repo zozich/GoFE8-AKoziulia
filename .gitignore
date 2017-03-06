@@ -1,3 +1,4 @@
 .idea
 *.iml
 lint.yml
+**/node_modules/
