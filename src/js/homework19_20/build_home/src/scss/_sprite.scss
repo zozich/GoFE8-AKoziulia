@@ -1,0 +1,54 @@
+.sprite {
+  background: url('../img/sprite/sprite_icons.png') no-repeat top left;
+  width: 16px;
+  height: 16px;
+}
+
+.sprite__facebook {
+  background-position: 0 0;
+  width: 8px;
+
+  &:hover {
+    background-position: -10px 0;
+    width: 8px;
+  }
+}
+
+.sprite__twitter {
+  background-position: -20px 0;
+  width: 17px;
+  height: 13px;
+
+  &:hover {
+    background-position: -39px 0;
+    width: 17px;
+    height: 13px;
+  }
+}
+
+.sprite__rss {
+  background-position: -58px 0;
+  height: 15px;
+
+  &:hover {
+    background-position: -76px 0;
+    height: 15px;
+  }
+}
+
+.sprite__linkedin {
+  background-position: -94px 0;
+
+  &:hover {
+    background-position: -112px 0;
+  }
+}
+
+.sprite__skype {
+  background-position: -130px 0;
+
+  &:hover {
+    background-position: -148px 0;
+  }
+}
+

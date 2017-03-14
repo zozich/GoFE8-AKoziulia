@@ -1,4 +1,119 @@
+.uppercase {
+    text-transform: uppercase;
+}
+
 .wrapper {
     width: 1160px;
     margin: 0 auto;
+}
+
+header {
+    margin: 40px 0 40px;
+}
+
+.links {
+    float: right;
+}
+
+.menu {
+    height: 56px;
+    background: $menu-background;
+
+    &__item {
+        display: inline-block;
+        width: 115px;
+        text-align: center;
+    }
+
+    &__link {
+        display: block;
+        line-height: 56px;
+        color: $menu-text;
+
+        &:hover {
+            background: $menu-background-hover;
+            color: $menu-text-hover;
+        }
+    }
+
+    &__search {
+        float: right;
+        position: relative;
+        width: 250px;
+        height: 40px;
+        background: $search-background;
+        border: 1px solid #181a1d;
+        color: $search-text;
+
+        &::after {
+            display: block;
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            width: 14px;
+            height: 14px;
+            background: url('../img/icons/search.png');
+            content: '';
+        }
+    }
+}
+
+.carousel-wrapper {
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    padding: 20px 0;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.info {
+    float: left;
+    position: relative;
+
+    &::before {
+        position: absolute;
+        display: block;
+        top: 0;
+        left: 0;
+        content: '';
+    }
+
+    &__location::before {
+        width: 12px;
+        height: 16px;
+        background: url('../img/icons/location.png');
+    }
+
+    &__phone::before {
+        width: 12px;
+        height: 16px;
+        background: url('../img/icons/phone.png');
+    }
+
+    &__email::before {
+        width: 16px;
+        height: 12px;
+        background: url('../img/icons/email.png');
+    }
+}
+
+.copyright {
+    float: right;
 }
