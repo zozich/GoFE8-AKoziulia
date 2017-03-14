@@ -1,8 +1,18 @@
-.uppercase {
-    text-transform: uppercase;
+body {
+    font-family: Ubuntu, Arial, sans-serif;
+}
+
+.clearfix::after {
+    display: block;
+    clear: both;
+    content: '';
 }
 
 .wrapper {
+    width: 100%;
+}
+
+.content {
     width: 1160px;
     margin: 0 auto;
 }
@@ -29,9 +39,11 @@ header {
         display: block;
         line-height: 56px;
         color: $menu-text;
+        font-family: UbuntuCondensed, Arial, sans-serif;
+        text-transform: uppercase;
 
         &:hover {
-            background: $menu-background-hover;
+            background: $text-hover;
             color: $menu-text-hover;
         }
     }
@@ -44,6 +56,7 @@ header {
         background: $search-background;
         border: 1px solid #181a1d;
         color: $search-text;
+        font-family: Arial, sans-serif;
 
         &::after {
             display: block;
@@ -57,8 +70,6 @@ header {
         }
     }
 }
-
-
 
 .carousel-wrapper {
     position: relative;
@@ -139,7 +150,8 @@ header {
 
     &__text {
         font-size: 13px;
-        color: $article-text
+        color: $article-text;
+        font-family: Arial, sans-serif;
     }
 
     &__read-more {
@@ -147,7 +159,7 @@ header {
 
         &::after {
             display: inline;
-            color: $article-read-more-hover;
+            color: $text-hover;
             content: '\u129050';
 
             &:hover {
@@ -156,24 +168,191 @@ header {
         }
 
         &:hover {
-            color: $article-read-more-hover;
+            color: $text-hover;
         }
     }
 }
 
+.wrapper-services {
+    background-color: $dark-background;
+}
 
+.services {
+    &__header {
+        margin: 47px 0 50px;
+        color: #fff;
+        font-size: 24px;
+    }
+}
 
+.service {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
 
+    &__img {
+        position: relative;
+        width: 260px;
+        height: 260px;
+        object-fit: cover;
 
+        &:hover::before {
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            width: 260px;
+            height: 260px;
+            background: url('../img/effects/blur_blue.png');
+            content: '';
+            z-index: 10;
+        }
 
+        &:hover::after {
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 50%;
+            font-size: 80px;
+            color: #fff;
+            content: '\u2795';
+            z-index: 20;
+        }
+    }
 
+    &__text {
+        margin-top: 20px;
+        color:  #fff;
+        font-size: 16px;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+}
 
+.wrapper-media {
+    background: $media-background;
+}
 
+.media {
+    &__div {
+        float: left;
+        width: 50%;
+        box-sizing: border-box;
+    }
+
+    &__header {
+        color: $media-header;
+        font-size: 24px;
+    }
+}
+
+.news {
+    position: relative;
+
+    &__month {
+        position: absolute;
+        top: 20px;
+        left: -15px;
+        width: 40px;
+        height: 40px;
+        background: $text-hover;
+        color:  #fff;
+        font-size: 15px;
+    }
+
+    &__day {
+        position: absolute;
+        top: 60px;
+        left: -15px;
+        width: 40px;
+        height: 40px;
+        background: $media-yellow;
+        color: #2a2b2e;
+        font-size: 18px;
+    }
+
+    &__header {
+        color: $media-header;
+        font-size: 16px;
+
+        &:hover {
+            color: $text-hover;
+        }
+    }
+
+    &__details {
+        color: $media-details;
+        font-size: 13px;
+        font-family: Arial, sans-serif;
+
+        &--link {
+            color: $media-details-link;
+            font-family: Arial, sans-serif;
+        }
+    }
+
+    &__text {
+        color: $media-text;
+        font-size: 13px;
+        font-family: Arial, sans-serif;
+    }
+}
+
+.partners {
+    margin: 100px 0;
+
+    &__item {
+        display: inline-block;
+        margin: 0 20px;
+    }
+}
+
+.wrapper-bottom {
+    background: $dark-background;
+}
+
+.menu_bottom {
+    padding: 30px 0;
+
+    &__section {
+        float: left;
+        width: 25%;
+        box-sizing: border-box;
+    }
+
+    &__header {
+        padding: 30px 0;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    &__item {
+        border-bottom: 1px solid $menu-bottom-text;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+
+    &__link {
+        color: $menu-bottom-text;
+        font-family: Arial, sans-serif;
+
+        &:hover {
+            color: $text-hover;
+        }
+    }
+}
+
+.wrapper-footer {
+    background: $footer-background;
+}
 
 footer {
     padding: 20px 0;
     font-size: 12px;
     line-height: 20px;
+    font-family: Arial, sans-serif;
 }
 
 .info {
