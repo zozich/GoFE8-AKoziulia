@@ -58,15 +58,108 @@ header {
     }
 }
 
+
+
 .carousel-wrapper {
+    position: relative;
     margin-top: 40px;
+    width: 1160px;
+    height: 470px;
+
+    &__brand-text {
+        position: absolute;
+        top: 233px;
+        left: 36px;
+    }
 }
 
+.carousel {
+    position: relative;
+    overflow: hidden;
 
+    &__list {
+        width: 20000em;
+        position: relative;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
+    &__list-item {
+        float: left;
+    }
+}
 
+.carousel-pagination {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+}
 
+.carousel-pagination a {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 2px;
+    padding: 3px;
+    width: 15px;
+    height: 15px;
+    background: #fff;
 
+}
+
+.carousel-pagination a.active {
+    background: #000;
+}
+
+.articles {
+    margin: 40px 0;
+    counter-reset: serial;
+}
+
+.article {
+    position: relative;
+    box-sizing: border-box;
+    width: 33%;
+
+    &::before {
+        position: absolute;
+        top: 10px;
+        left: -40px;
+        font-size: 90px;
+        color: #f00;
+        counter-increment: serial;
+        content: '0' counter(serial);
+    }
+
+    &__header {
+        color: $article-header;
+        margin: 5px 2px;
+        font-size: 20px;
+    }
+
+    &__text {
+        font-size: 13px;
+        color: $article-text
+    }
+
+    &__read-more {
+        color: $article-read-more;
+
+        &::after {
+            display: inline;
+            color: $article-read-more-hover;
+            content: '\u129050';
+
+            &:hover {
+                color: $article-read-more;
+            }
+        }
+
+        &:hover {
+            color: $article-read-more-hover;
+        }
+    }
+}
 
 
 
