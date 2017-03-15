@@ -9,24 +9,28 @@
 </head>
 <body>
     <header class="content">
+        <div class="links">
+            <ul>
+                <li class="links__item"><a class="sprite sprite__facebook" href="#"></a></li>
+                <li class="links__item"><a class="sprite sprite__twitter" href="#"></a></li>
+                <li class="links__item"><a class="sprite sprite__rss" href="#"></a></li>
+                <li class="links__item"><a class="sprite sprite__linkedin" href="#"></a></li>
+                <li class="links__item"><a class="sprite sprite__skype" href="#"></a></li>
+            </ul>
+        </div>
+
         <div class="logo">
             <a class="logo__link" href="#">
                 <img class="logo__img" src="dist/img/brand/logo.png" alt="Build Home">
             </a>
         </div>
-
-        <div class="links">
-            <ul>
-                <li><a class="sprite sprite__facebook" href="#"></a></li>
-                <li><a class="sprite sprite__twitter" href="#"></a></li>
-                <li><a class="sprite sprite__rss" href="#"></a></li>
-                <li><a class="sprite sprite__linkedin" href="#"></a></li>
-                <li><a class="sprite sprite__skype" href="#"></a></li>
-            </ul>
-        </div>
     </header>
 
     <div class="menu content">
+        <div class="menu__search">
+            <input type="text" placeholder="Search...">
+        </div>
+
         <ul>
             <li class="menu__item"><a class="menu__link" href="#">Home</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Features</a></li>
@@ -34,10 +38,6 @@
             <li class="menu__item"><a class="menu__link" href="#">News</a></li>
             <li class="menu__item"><a class="menu__link" href="#">Shop</a></li>
         </ul>
-
-        <div class="menu__search">
-            <input type="text" placeholder="Search...">
-        </div>
     </div>
 
     <div class="carousel-wrapper content">
@@ -48,13 +48,13 @@
         <div class="carousel">
             <ul class="carousel__list">
                 <li class="carousel__list-item">
-                    <img src="dist/img/brand/carousel1.jpg" alt="Build your business">
+                    <img class="carousel__img" src="dist/img/brand/carousel1.jpg" alt="Build your business">
                 </li>
                 <li class="carousel__list-item">
-                    <img src="dist/img/brand/carousel2.jpg" alt="Build your business">
+                    <img class="carousel__img" src="dist/img/brand/carousel2.jpg" alt="Build your business">
                 </li>
                 <li class="carousel__list-item">
-                    <img src="dist/img/brand/carousel3.jpg" alt="Build your business">
+                    <img class="carousel__img" src="dist/img/brand/carousel3.jpg" alt="Build your business">
                 </li>
             </ul>
         </div>
@@ -64,7 +64,6 @@
 
     <div class="articles content clearfix">
         <article class="article">
-            <div class="article__number">01</div>
             <div class="article__logo">
                 <img src="dist/img/icons/settings.png" alt="Power inside">
             </div>
@@ -73,7 +72,7 @@
                 Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo
                 et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem.
             </div>
-            <div class="article__read-more"><a href="#">Read More</a></div>
+            <div class="article__read-more"><a class="article__read-more__link" href="#">Read More</a></div>
         </article>
 
         <article class="article">
@@ -85,11 +84,10 @@
                 Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo
                 et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem.
             </div>
-            <div class="article__read-more"><a href="#">Read More</a></div>
+            <div class="article__read-more"><a class="article__read-more__link" href="#">Read More</a></div>
         </article>
 
         <article class="article">
-            <div class="article__number">03</div>
             <div class="article__logo">
                 <img src="dist/img/icons/truck.png" alt="Fast support">
             </div>
@@ -98,7 +96,7 @@
                 Cum sociis natoque penatibus et magnis dis parturient montesmus. Pro vel nibh et elit mollis commodo
                 et nec augueique Nemo enim ipsam voluptatem quia ptas sit aspernatur samomo enim ipsam voluptatem.
             </div>
-            <div class="article__read-more"><a href="#">Read More</a></div>
+            <div class="article__read-more"><a class="article__read-more__link" href="#">Read More</a></div>
         </article>
     </div>
 
@@ -107,24 +105,32 @@
             <h2 class="services__header">Our services</h2>
 
             <div class="service">
-                <img class="service__img" src="dist/img/services/schedule.jpg" alt="Schedule Services">
-                <div class="service__text">Schedule Services</div>
+                <a class="service__link" href="#">
+                    <img class="service__img" src="dist/img/services/schedule.jpg" alt="Schedule Services">
+                    <div class="service__text">Schedule Services</div>
+                </a>
             </div>
 
             <div class="service">
-                <img class="service__img" src="dist/img/services/preventive_maintenance.jpg"
-                     alt="Preventive Maintenance">
-                <div class="service__text">Preventive Maintenance</div>
+                <a class="service__link" href="#">
+                    <img class="service__img" src="dist/img/services/preventive_maintenance.jpg"
+                         alt="Preventive Maintenance">
+                    <div class="service__text">Preventive Maintenance</div>
+                </a>
             </div>
 
             <div class="service">
-                <img class="service__img" src="dist/img/services/tire_wheel.jpg" alt="Tire & Wheel Services">
-                <div class="service__text">Tire & Wheel Services</div>
+                <a class="service__link" href="#">
+                    <img class="service__img" src="dist/img/services/tire_wheel.jpg" alt="Tire & Wheel Services">
+                    <div class="service__text">Tire & Wheel Services</div>
+                </a>
             </div>
 
             <div class="service">
-                <img class="service__img" src="dist/img/services/repair.jpg" alt="Repair Services">
-                <div class="service__text">Repair Services</div>
+                <a class="service__link" href="#">
+                    <img class="service__img" src="dist/img/services/repair.jpg" alt="Repair Services">
+                    <div class="service__text">Repair Services</div>
+                </a>
             </div>
         </div>
     </div>

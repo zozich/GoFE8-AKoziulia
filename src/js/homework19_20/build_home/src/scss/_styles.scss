@@ -14,24 +14,34 @@ body {
 
 .content {
     width: 1160px;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 header {
-    margin: 40px 0 40px;
+    margin: 37px 0 37px;
 }
 
 .links {
     float: right;
+    padding-top: 15px;
+
+    &__item {
+        display: inline-block;
+        margin-right: 3px;
+        margin-left: 13px;
+    }
 }
 
 .menu {
     height: 56px;
     background: $menu-background;
+    font-size: 0;
 
     &__item {
         display: inline-block;
         width: 115px;
+        border-right: 1px solid #000;
         text-align: center;
     }
 
@@ -40,6 +50,7 @@ header {
         line-height: 56px;
         color: $menu-text;
         font-family: UbuntuCondensed, Arial, sans-serif;
+        font-size: 14px;
         text-transform: uppercase;
 
         &:hover {
@@ -52,16 +63,26 @@ header {
         float: right;
         position: relative;
         width: 250px;
-        height: 40px;
-        background: $search-background;
+        height: 35px;
+        margin: 11px 9px 0 0;
         border: 1px solid #181a1d;
-        color: $search-text;
         font-family: Arial, sans-serif;
+
+        input {
+            width: 100%;
+            height: 100%;
+            padding-left: 15px;
+            background: $search-background;
+            border: none;
+            color: $menu-text;
+            box-sizing: border-box;
+            @include placeholder-color($search-placeholder);
+        }
 
         &::after {
             display: block;
             position: absolute;
-            top: 5px;
+            top: 10px;
             right: 15px;
             width: 14px;
             height: 14px;
@@ -81,6 +102,7 @@ header {
         position: absolute;
         top: 233px;
         left: 36px;
+        z-index: 10;
     }
 }
 
@@ -99,76 +121,105 @@ header {
     &__list-item {
         float: left;
     }
+
+    &__img {
+        width: 1160px;
+        height: 470px;
+        object-fit: cover;
+    }
 }
 
 .carousel-pagination {
     position: absolute;
     bottom: 10px;
-    left: 50%;
-}
+    left: 47%;
+    z-index: 20;
 
-.carousel-pagination a {
-    text-decoration: none;
-    display: inline-block;
-    margin-right: 2px;
-    padding: 3px;
-    width: 15px;
-    height: 15px;
-    background: #fff;
+    a {
+        position: relative;
+        text-decoration: none;
+        display: inline-block;
+        margin-right: 20px;
+        width: 16px;
+        height: 16px;
+        background: #fff;
 
-}
-
-.carousel-pagination a.active {
-    background: #000;
+        &.active::before {
+            position: absolute;
+            display: block;
+            top: 3px;
+            left: 3px;
+            width: 10px;
+            height: 10px;
+            background: #000;
+            content: '';
+        }
+    }
 }
 
 .articles {
-    margin: 40px 0;
+    margin-top: 40px;
+    margin-bottom: 40px;
     counter-reset: serial;
 }
 
 .article {
     position: relative;
-    box-sizing: border-box;
+    display: inline-block;
     width: 33%;
+    padding-left: 120px;
+    box-sizing: border-box;
 
     &::before {
         position: absolute;
-        top: 10px;
-        left: -40px;
+        top: -8px;
+        left: 0;
         font-size: 90px;
-        color: #f00;
+        font-weight: bold;
+        color: $article-number;
         counter-increment: serial;
         content: '0' counter(serial);
     }
 
     &__header {
         color: $article-header;
-        margin: 5px 2px;
+        margin: 15px 2px;
         font-size: 20px;
+        font-weight: bold;
     }
 
     &__text {
+        height: 60px;
+        overflow: hidden;
         font-size: 13px;
+        line-height: 20px;
         color: $article-text;
         font-family: Arial, sans-serif;
     }
 
     &__read-more {
-        color: $article-read-more;
+        margin-top: 22px;
 
-        &::after {
-            display: inline;
-            color: $text-hover;
-            content: '\u129050';
+        &__link {
+            font-size: 13px;
+            color: $article-read-more;
+            font-weight: bold;
+
+            &::after {
+                display: inline;
+                padding-left: 10px;
+                color: $text-hover;
+                font-weight: bold;
+                content: '\2192';
+            }
 
             &:hover {
-                color: $article-read-more;
-            }
-        }
+                color: $text-hover;
 
-        &:hover {
-            color: $text-hover;
+                &::after {
+                    color: $article-read-more;
+                }
+            }
         }
     }
 }
@@ -178,24 +229,23 @@ header {
 }
 
 .services {
+    padding: 47px 0 60px;
+
     &__header {
-        margin: 47px 0 50px;
+        margin-bottom: 50px;
         color: #fff;
         font-size: 24px;
+        font-weight: bold;
     }
 }
 
 .service {
+    position: relative;
     width: 25%;
     float: left;
     box-sizing: border-box;
 
-    &__img {
-        position: relative;
-        width: 260px;
-        height: 260px;
-        object-fit: cover;
-
+    &__link {
         &:hover::before {
             position: absolute;
             display: block;
@@ -211,19 +261,28 @@ header {
         &:hover::after {
             position: absolute;
             display: block;
-            top: 50%;
-            left: 50%;
+            top: 90px;
+            left: 110px;
             font-size: 80px;
             color: #fff;
-            content: '\u2795';
+            content: '+';
             z-index: 20;
         }
     }
 
+    &__img {
+        width: 260px;
+        height: 260px;
+        object-fit: cover;
+        z-index: 5;
+    }
+
     &__text {
-        margin-top: 20px;
+        margin-top: 30px;
+        padding-right: 40px;
         color:  #fff;
         font-size: 16px;
+        font-weight: bold;
         text-align: center;
         font-family: Arial, sans-serif;
     }

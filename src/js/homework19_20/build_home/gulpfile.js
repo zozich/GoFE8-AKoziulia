@@ -7,8 +7,8 @@ var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var sequence = require('gulp-sequence');
 
-gulp.task('build-css', function () {
-    return gulp.src(['src/lib/**/*.css', 'src/scss/*.scss'])
+gulp.task('build-css', ['clean-css'], function () {
+    return gulp.src(['src/lib/**/*.css', 'src/scss/main.scss'])
         .pipe(concat('styles.css'))
         .pipe(sass())
         .pipe(gulp.dest('dist/css'))
@@ -17,7 +17,7 @@ gulp.task('build-css', function () {
         .pipe(gulp.dest('dist/css'))
 });
 
-gulp.task('build-js', function () {
+gulp.task('build-js', ['clean-js'], function () {
     return gulp.src(['src/lib/jquery/*.js', 'src/lib/**/*.js', 'src/js/*.js'])
         .pipe(concat('script.js'))
         .pipe(gulp.dest('dist/js'))
@@ -25,6 +25,17 @@ gulp.task('build-js', function () {
         .pipe(rename('script.min.js'))
         .pipe(gulp.dest('dist/js'));
 });
+
+gulp.task('clean-js', function () {
+    return gulp.src('dist/js')
+        .pipe(clean());
+});
+
+gulp.task('clean-css', function () {
+    return gulp.src('dist/css')
+        .pipe(clean());
+});
+
 
 gulp.task('clean', function () {
     return gulp.src('dist')
