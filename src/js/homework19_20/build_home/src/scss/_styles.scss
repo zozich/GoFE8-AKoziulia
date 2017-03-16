@@ -264,6 +264,7 @@ header {
             top: 90px;
             left: 110px;
             font-size: 80px;
+            font-weight: 100;
             color: #fff;
             content: '+';
             z-index: 20;
@@ -390,13 +391,47 @@ header {
     }
 }
 
-.accordion {
+.ui-accordion {
 
-    &__header {
+    &-header {
+        position: relative;
+        padding: 15px 60px !important;
+        background: #fff;
+        border: 1px solid $accordion-border;
+        border-radius: 0;
+        color: $media-header;
+        font-size: 13px !important;
+        font-weight: bold;
+        text-transform: uppercase;
 
+        &::before {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: 0;
+            left: 0;
+            width: 46px;
+            height: 46px;
+            font-size: 22px;
+            font-weight: 100;
+            border-right: 2px solid $accordion-border;
+            content: '+';
+        }
+
+        &-active {
+            background: $accordion-selected;
+            color: #fff;
+            border: none;
+
+            &::before {
+                border-right: 2px solid $accordion-border-selected;
+                content: '-';
+            }
+        }
     }
 
-    &__text {
+    &-content {
         color: $media-text;
         font-family: Arial, sans-serif;
         font-size: 13px;
@@ -484,6 +519,7 @@ footer {
     margin-left: 10px;
     padding-right: 30px;
     padding-left: 25px;
+    color: $footer-text;
 
     &::before {
         position: absolute;
@@ -514,4 +550,5 @@ footer {
 
 .copyright {
     float: right;
+    color: $footer-text;
 }
