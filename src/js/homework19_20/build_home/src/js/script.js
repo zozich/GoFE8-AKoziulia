@@ -15,4 +15,10 @@ $(function () {
             }
         });
 
+    $(".accordion").accordion({
+        active: 0,
+        animate: 200,
+        collapsible: true,
+        header: "h3"
+    });
 });

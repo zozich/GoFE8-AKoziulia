@@ -290,6 +290,7 @@ header {
 
 .wrapper-media {
     background: $media-background;
+    padding-top: 65px;
 }
 
 .media {
@@ -300,39 +301,69 @@ header {
     }
 
     &__header {
+        margin-bottom: 40px;
         color: $media-header;
         font-size: 24px;
+        font-weight: bold;
     }
 }
 
 .news {
     position: relative;
+    margin-bottom: 30px;
 
     &__month {
         position: absolute;
-        top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 15px;
         left: -15px;
         width: 40px;
         height: 40px;
         background: $text-hover;
         color:  #fff;
         font-size: 15px;
+        font-weight: bold;
     }
 
     &__day {
         position: absolute;
-        top: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 55px;
         left: -15px;
         width: 40px;
         height: 40px;
         background: $media-yellow;
         color: #2a2b2e;
         font-size: 18px;
+        font-weight: bold;
+    }
+
+    &__logo {
+        display: inline-block;
+    }
+
+    &__img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    &__body {
+        display: inline-block;
+        width: calc(100% - 160px);
+        padding: 0 15px 0 30px;
+        box-sizing: border-box;
+        vertical-align: top;
     }
 
     &__header {
         color: $media-header;
         font-size: 16px;
+        font-weight: bold;
 
         &:hover {
             color: $text-hover;
@@ -340,6 +371,7 @@ header {
     }
 
     &__details {
+        padding: 7px 0 25px;
         color: $media-details;
         font-size: 13px;
         font-family: Arial, sans-serif;
@@ -352,17 +384,41 @@ header {
 
     &__text {
         color: $media-text;
-        font-size: 13px;
         font-family: Arial, sans-serif;
+        font-size: 13px;
+        line-height: 20px;
+    }
+}
+
+.accordion {
+
+    &__header {
+
+    }
+
+    &__text {
+        color: $media-text;
+        font-family: Arial, sans-serif;
+        font-size: 13px;
+        line-height: 20px;
+        border: none;
+        background: inherit;
     }
 }
 
 .partners {
-    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
 
     &__item {
         display: inline-block;
-        margin: 0 20px;
+        margin-right: 48px;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 
@@ -370,23 +426,31 @@ header {
     background: $dark-background;
 }
 
-.menu_bottom {
-    padding: 30px 0;
+.menu-bottom {
+    padding: 50px 0;
 
     &__section {
         float: left;
+        padding-right: 35px;
         width: 25%;
         box-sizing: border-box;
+
+        &:last-child {
+            padding-right: 0;
+        }
     }
 
     &__header {
         padding: 30px 0;
         color: #fff;
+        font-size: 16px;
+        font-weight: bold;
         text-transform: uppercase;
     }
 
     &__item {
         border-bottom: 1px solid $menu-bottom-text;
+        line-height: 36px;
 
         &:last-child {
             border-bottom: none;
@@ -417,31 +481,34 @@ footer {
 .info {
     float: left;
     position: relative;
+    margin-left: 10px;
+    padding-right: 30px;
+    padding-left: 25px;
 
     &::before {
         position: absolute;
         display: block;
         top: 0;
         left: 0;
-        content: '';
+        vertical-align: middle;
     }
 
     &__location::before {
-        width: 12px;
+        width: 16px;
         height: 16px;
-        background: url('../img/icons/location.png');
+        content: url('../img/icons/location.png');
     }
 
     &__phone::before {
         width: 12px;
         height: 16px;
-        background: url('../img/icons/phone.png');
+        content: url('../img/icons/phone.png');
     }
 
     &__email::before {
         width: 16px;
         height: 12px;
-        background: url('../img/icons/email.png');
+        content: url('../img/icons/email.png');
     }
 }
 
