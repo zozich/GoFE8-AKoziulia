@@ -3,15 +3,13 @@ var cleanCss = require('gulp-clean-css');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var clean = require('gulp-clean');
-var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var sequence = require('gulp-sequence');
 var babel = require('gulp-babel');
 
 gulp.task('build-css', ['clean-css'], function () {
-    return gulp.src(['src/lib/**/*.css', 'src/scss/main.scss'])
+    return gulp.src(['src/css/reset.css', 'src/lib/**/*.css', 'src/css/styles.css'])
         .pipe(concat('styles.css'))
-        .pipe(sass())
         .pipe(gulp.dest('dist/css'))
         .pipe(cleanCss())
         .pipe(rename('styles.min.css'))
@@ -19,7 +17,7 @@ gulp.task('build-css', ['clean-css'], function () {
 });
 
 gulp.task('build-js', ['clean-js'], function () {
-    return gulp.src(['src/lib/jquery/*.js', 'src/lib/**/*.js', 'src/js/*.js'])
+    return gulp.src(['src/lib/**/*.js', 'src/js/test_module.js', 'src/js/script.js'])
         .pipe(concat('script.js'))
         .pipe(babel({
             presets: ['es2015']
@@ -40,27 +38,16 @@ gulp.task('clean-css', function () {
         .pipe(clean());
 });
 
-
 gulp.task('clean', function () {
     return gulp.src('dist')
         .pipe(clean());
 });
 
-gulp.task('copy-images', function () {
-    return gulp.src('src/img/**/**')
-        .pipe(gulp.dest('dist/img'));
-});
-
-gulp.task('copy-fonts', function () {
-    return gulp.src('src/fonts/**/**')
-        .pipe(gulp.dest('dist/fonts'));
-});
-
 gulp.task('watch', function () {
-    gulp.watch('src/scss/**/*.scss', ['build-css']);
+    gulp.watch('src/css/**/*.css', ['build-css']);
     gulp.watch('src/js/**/*.js', ['build-js']);
 });
 
 gulp.task('default', function (cb) {
-    sequence('clean', ['build-css', 'build-js', 'copy-images', 'copy-fonts'])(cb);
+    sequence('clean', ['build-css', 'build-js'])(cb);
 });
