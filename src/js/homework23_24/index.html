@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
+    <script src="lib/lodash/lodash.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <script type="text/html" id="wrapper_template">
+        <div class="wrapper">
+            <ul class="item-list"></ul>
+
+            <div class="controls">
+                <input type="text" class="item-value">
+                <button type="button" class="item-add">Add</button>
+            </div>
+        </div>
+    </script>
+
+    <script type="text/html" id="list_template">
+        <% for (var i = 0; i < data.length; i++) { %>
+        <li><%= data[i] %><span data-value="<%= data[i] %>" class="item-delete">x</span></li>
+        <% } %>
+    </script>
+</body>
+</html>
