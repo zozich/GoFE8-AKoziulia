@@ -6,25 +6,29 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src="lib/jquery/jquery-3.1.1.min.js"></script>
-    <script src="lib/lodash/lodash.min.js"></script>
-    <script src="js/script.js"></script>
+    <script data-main="js/main" src="lib/require/require.js"></script>
 </head>
 <body>
     <script type="text/html" id="wrapper_template">
         <div class="wrapper">
-            <ul class="item-list"></ul>
+            <h1 class="header">To Do list</h1>
+            <ul class="list"></ul>
 
             <div class="controls">
-                <input type="text" class="item-value">
-                <button type="button" class="item-add">Add</button>
+                <input type="text" class="controls__value">
+                <button type="button" class="controls__add">Add</button>
+                <button type="button" class="controls__ok">Ok</button>
             </div>
         </div>
     </script>
 
     <script type="text/html" id="list_template">
         <% for (var i = 0; i < data.length; i++) { %>
-        <li><%= data[i] %><span data-value="<%= data[i] %>" class="item-delete">x</span></li>
+            <li class="list__item">
+                <%= data[i] %>
+                <span data-value="<%= data[i] %>" class="list__edit">&#9998;</span>
+                <span data-value="<%= data[i] %>" class="list__delete">&#x2717;</span>
+            </li>
         <% } %>
     </script>
 </body>
