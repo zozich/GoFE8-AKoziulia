@@ -1,0 +1,14 @@
+{
+  "name": "react_application",
+  "version": "1.0.0",
+  "description": "My first React JS application",
+  "main": "index.html",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.15.2"
+  }
+}
