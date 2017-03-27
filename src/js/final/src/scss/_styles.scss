@@ -1,0 +1,301 @@
+.wrapper {
+  color: $text-color;
+}
+
+.content {
+  width: 100%;
+  min-width: 320px;
+}
+
+.wrapper__header {
+  background: url('../img/background_header.jpg');
+  text-align: center;
+}
+
+.registration {
+  margin-top: 20px;
+  line-height: 36px;
+  box-sizing: border-box;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+
+  &__login {
+    display: inline-block;
+    width: 90px;
+    color: $text-color;
+  }
+
+  &__register {
+    display: inline-block;
+    width: 90px;
+    border: 1px solid $text-color;
+    border-radius: 20px;
+    color: $text-color;
+  }
+}
+
+.logo {
+  margin-top: 115px;
+  text-align: center;
+
+  &__link {
+    color: $text-color;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  &--red {
+    color: $action-red;
+  }
+}
+
+.header {
+  &__title {
+    margin: 38px 0 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    font-size: 18px;
+  }
+
+  &__proceed {
+    border-radius: 20px;
+    background-color: $action-red;
+    width: 280px;
+    height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+.about,
+.partners,
+.ideas {
+  padding: 10px;
+}
+
+.about {
+  &__title {
+    margin: 38px 0 15px;
+    color: $text-dark;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  &__section {
+    float: left;
+    height: 238px;
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    &--step1 {
+      background: url('../img/about/about1.jpg');
+    }
+
+    &--step2 {
+      background: url('../img/about/about2.jpg');
+    }
+
+    &--step3 {
+      background: url('../img/about/about3.jpg');
+    }
+  }
+
+  &__step {
+    margin: 75px 0 20px;
+    width: 70px;
+    height: 20px;
+    background: $action-red;
+    font-size: 10px;
+    line-height: 31px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  &__text {
+    color: $text-light-dark;
+    font-size: 14px;
+  }
+}
+
+.partners {
+  text-align: center;
+
+  &__title {
+    margin: 40px 0 15px;
+    color: $text-dark;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  &__section {
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  &__avatar {
+    position: relative;
+  }
+
+  &__img {
+    width: 121px;
+    height: 121px;
+    border-radius: 50%;
+  }
+
+  &__icon {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    right: 17px;
+    bottom: 17px;
+    border-radius: 50%;
+    z-index: 10;
+
+    &:before {
+      width: 37px;
+      height: 37px;
+      background: #fff;
+      border-radius: 50%;
+      z-index: 5;
+    }
+
+    &:after {
+      position: absolute;
+      display: block;
+      top: 5px;
+      left: 5px;
+      width: 17px;
+      height: 17px;
+      z-index: 15;
+    }
+
+    &--television:after {
+      background: $action-red;
+      content: url('../img/icons/icon_tele.png');
+    }
+
+    &--flask:after {
+      background: $bg-yellow;
+      content: url('../img/icons/icon_flask.png');
+    }
+
+    &--cup:after {
+      background: $bg-green;
+      content: url('../img/icons/icon_cup.png');
+    }
+
+    &--plane:after {
+      background: $bg-blue;
+      content: url('../img/icons/icon_plane.png');
+    }
+  }
+
+  &__name {
+    margin: 20px 0;
+    color: $text-dark;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  &__about {
+    color: $text-light-dark;
+    font-size: 14px;
+    font-weight: 300;
+  }
+
+  &__more {
+    margin: 40px 0 20px;
+    width: 280px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid $action-red;
+    box-sizing: border-box;
+    color: $action-red;
+    background: #fff;
+  }
+}
+
+.search {
+  text-align: center;
+
+  &__title {
+    color: $text-dark;
+    font-size: 22px;
+    font-weight: bold;
+  }
+
+  &__question {
+    color: $text-dark;
+    font-size: 18px;
+  }
+
+  &__controls {
+
+  }
+
+  &__imput {
+    padding-left: 20px;
+    display: block;
+    color: $text-light;
+    vertical-align: middle;
+  }
+
+  &__button {
+    @extend .header__proceed;
+    display: block;
+  }
+}
+
+.wrapper__footer {
+  border-top: 4px solid $action-red;
+}
+
+.menu {
+  &__title {
+    color: $text-dark;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 0 10px 0 10px;
+  }
+
+  &__link {
+    color: $text-light-dark;
+    font-size: 14px;
+  }
+}
+
+.designed {
+  margin-top: 20px;
+  text-align: center;
+
+  &__title {
+    color: $text-design;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  &__logo {
+    width: 110px;
+    height: 24px;
+  }
+
+  &__img {
+
+  }
+}

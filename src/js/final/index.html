@@ -37,7 +37,7 @@
         <div class="about content">
             <h2 class="about__title">How Urlaubsglück works?</h2>
 
-            <div class="col-1-sm col-3-md about__section">
+            <div class="about__section about__section--step1">
                 <div class="about__step">Step 1</div>
                 <h3 class="about__subtitle">Sed leo enim, condimentum</h3>
                 <div class="about__text">
@@ -46,7 +46,7 @@
                 </div>
             </div>
 
-            <div class="col-1-sm col-3-md about__section">
+            <div class="about__section about__section--step2">
                 <div class="about__step">Step 2</div>
                 <h3 class="about__subtitle">Morbi velit risus</h3>
                 <div class="about__text">
@@ -54,7 +54,7 @@
                 </div>
             </div>
 
-            <div class="col-1-sm col-3-md about__section">
+            <div class="about__section about__section--step2">
                 <div class="about__step">Step 3</div>
                 <h3 class="about__subtitle">Sed leo enim, condimentum</h3>
                 <div class="about__text">
@@ -68,10 +68,11 @@
             <h2 class="partners__title">Meet a partner for your best holiday</h2>
             <!-- "main__title" or just "title"? -->
 
-            <div class="col-1-sm col-2-md col-4-lg partners__section">
+            <div class="partners__section">
                 <!-- just "section"? -->
                 <div class="partners__avatar">
                     <img class="partners__img" src="src" alt="Bradley Hunter">
+                    <div class="partners__icon partners__icon--television"></div>
                 </div>
                 <div class="partners__name">Bradley Hunter</div>
                 <div class="partners__about">
@@ -79,9 +80,10 @@
                 </div>
             </div>
 
-            <div class="col-1-sm col-2-md col-4-lg partners__section">
+            <div class="partners__section">
                 <div class="partners__avatar">
                     <img class="partners__img" src="src" alt="Heather Walker">
+                    <div class="partners__icon partners__icon--flask"></div>
                 </div>
                 <div class="partners__name">Heather Walker</div>
                 <div class="partners__about">
@@ -89,9 +91,10 @@
                 </div>
             </div>
 
-            <div class="col-1-sm col-2-md col-4-lg partners__section">
+            <div class="partners__section">
                 <div class="partners__avatar">
                     <img class="partners__img" src="src" alt="Lucas Marsha">
+                    <div class="partners__icon partners__icon--cup"></div>
                 </div>
                 <div class="partners__name">Lucas Marsha</div>
                 <div class="partners__about">
@@ -100,9 +103,10 @@
                 </div>
             </div>
 
-            <div class="col-1-sm col-2-md col-4-lg partners__section">
+            <div class="partners__section">
                 <div class="partners__avatar">
                     <img class="partners__img" src="src" alt="Bradley Hunter">
+                    <div class="partners__icon partners__icon--plane"></div>
                 </div>
                 <div class="partners__name">Bradley Hunter</div>
                 <div class="partners__about">Based in Chicago. I love playing tennis and loud music.</div>
@@ -118,14 +122,15 @@
         </div>
 
         <div class="search content">
+            <!--toDo: change to content__title ?-->
             <h2 class="search__title">Discover holiday activity ideas</h2>
             <div class="search__question">Hi! What are your holiday interests?</div>
             <div class="search__controls">
                 <input type="text"
-                       class="col-1-sm search__input"
+                       class="search__input"
                        id="search__input"
                        placeholder="Enter your interests">
-                <button type="button" class="col-1-sm inline-md search__button" id="search__button">
+                <button type="button" class="search__button" id="search__button">
                     Search partners
                 </button>
             </div>
@@ -134,11 +139,11 @@
 
     <div class="wrapper wrapper__footer">
         <footer class="content">
-            <div class="logo logo--red col-4-md">
+            <div class="logo logo--red">
                 <a href="#" class="logo__link">URLAUBSGLÜCK</a>
             </div>
 
-            <div class="menu col-1-sm col-4-md inline-lg">
+            <div class="menu">
                 <h3 class="menu__title">Company</h3>
                 <ul>
                     <li class="menu__item"><a href="#" class="menu__link">About</a></li>
@@ -148,11 +153,11 @@
                 </ul>
             </div>
 
-            <div class="menu col-1-sm col-4-md">
+            <div class="menu">
                 <h3 class="menu__title">Company</h3>
             </div>
 
-            <div class="designed col-4-md">
+            <div class="designed">
                 <h3 class="designed__title">Designed by</h3>
                 <div class="designed__logo">
                     <a href="#" class="designed__link">
