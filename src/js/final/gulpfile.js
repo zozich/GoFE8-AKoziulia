@@ -6,11 +6,17 @@ var clean = require('gulp-clean');
 var sass = require('gulp-sass');
 var rename = require('gulp-rename');
 var sequence = require('gulp-sequence');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
+var prefixer = require('gulp-autoprefixer');
 
 gulp.task('build-css', ['clean-css'], function () {
     return gulp.src(['src/lib/**/*.css', 'src/scss/main.scss'])
         .pipe(concat('styles.css'))
         .pipe(sass())
+        .pipe(prefixer({
+            browsers: ['ie >= 8', 'Firefox >= 5', 'Opera >= 15']
+        }))
         .pipe(gulp.dest('dist/css'))
         .pipe(cleanCss())
         .pipe(rename('styles.min.css'))
@@ -44,6 +50,12 @@ gulp.task('clean', function () {
 
 gulp.task('prepare-images', function () {
     return gulp.src('src/img/**/**')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()],
+            interlaced: true
+        }))
         .pipe(gulp.dest('dist/img'));
 });
 
