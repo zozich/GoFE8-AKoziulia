@@ -34,8 +34,8 @@
     </div>
 
     <div class="wrapper wrapper__main">
-        <div class="about content">
-            <h2 class="about__title">How Urlaubsglück works?</h2>
+        <div class="about content clearfix">
+            <h2 class="content__title">How Urlaubsglück works?</h2>
 
             <div class="about__section about__section--step1">
                 <div class="about__step">Step 1</div>
@@ -65,14 +65,14 @@
         </div>
 
         <div class="partners content">
-            <h2 class="partners__title">Meet a partner for your best holiday</h2>
-            <!-- "main__title" or just "title"? -->
+            <h2 class="content__title">Meet a partner for your best holiday</h2>
 
             <div class="partners__section">
-                <!-- just "section"? -->
                 <div class="partners__avatar">
-                    <img class="partners__img" src="src" alt="Bradley Hunter">
-                    <div class="partners__icon partners__icon--television"></div>
+                    <img class="partners__img" src="dist/img/partners/bradley_hunter.jpg" alt="Bradley Hunter">
+                    <div class="partners__icon partners__icon--television">
+                        <img class="partners__logo-img" src="dist/img/icons/tele.png">
+                    </div>
                 </div>
                 <div class="partners__name">Bradley Hunter</div>
                 <div class="partners__about">
@@ -82,8 +82,10 @@
 
             <div class="partners__section">
                 <div class="partners__avatar">
-                    <img class="partners__img" src="src" alt="Heather Walker">
-                    <div class="partners__icon partners__icon--flask"></div>
+                    <img class="partners__img" src="dist/img/partners/heather_walker.jpg" alt="Heather Walker">
+                    <div class="partners__icon partners__icon--flask">
+                        <img class="partners__logo-img" src="dist/img/icons/flask.png">
+                    </div>
                 </div>
                 <div class="partners__name">Heather Walker</div>
                 <div class="partners__about">
@@ -93,8 +95,10 @@
 
             <div class="partners__section">
                 <div class="partners__avatar">
-                    <img class="partners__img" src="src" alt="Lucas Marsha">
-                    <div class="partners__icon partners__icon--cup"></div>
+                    <img class="partners__img" src="dist/img/partners/lucas_marsha.jpg" alt="Lucas Marsha">
+                    <div class="partners__icon partners__icon--cup">
+                        <img class="partners__logo-img" src="dist/img/icons/cup.png">
+                    </div>
                 </div>
                 <div class="partners__name">Lucas Marsha</div>
                 <div class="partners__about">
@@ -105,8 +109,10 @@
 
             <div class="partners__section">
                 <div class="partners__avatar">
-                    <img class="partners__img" src="src" alt="Bradley Hunter">
-                    <div class="partners__icon partners__icon--plane"></div>
+                    <img class="partners__img" src="dist/img/partners/bradley_hunter_2.jpg" alt="Bradley Hunter">
+                    <div class="partners__icon partners__icon--plane">
+                        <img class="partners__logo-img" src="dist/img/icons/plane.png">
+                    </div>
                 </div>
                 <div class="partners__name">Bradley Hunter</div>
                 <div class="partners__about">Based in Chicago. I love playing tennis and loud music.</div>
@@ -118,18 +124,18 @@
         </div>
 
         <div class="ideas content">
-
+            <h2 class="content__title">Discover holiday activity ideas</h2>
         </div>
 
         <div class="search content">
-            <!--toDo: change to content__title ?-->
-            <h2 class="search__title">Discover holiday activity ideas</h2>
+            <h2 class="content__title">Discover holiday activity ideas</h2>
             <div class="search__question">Hi! What are your holiday interests?</div>
             <div class="search__controls">
                 <input type="text"
                        class="search__input"
                        id="search__input"
                        placeholder="Enter your interests">
+
                 <button type="button" class="search__button" id="search__button">
                     Search partners
                 </button>

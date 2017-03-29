@@ -1,19 +1,36 @@
 .wrapper {
   color: $text-color;
+  font-family: Montserrat, Arial, sans-serif;
 }
 
 .content {
   width: 100%;
   min-width: 320px;
+  max-width: 1024px;
+
+  &__title {
+    margin: 38px 0 15px;
+    color: $text-dark;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+  }
+}
+
+.clearfix:after {
+  display: block;
+  clear: both;
+  content: '';
 }
 
 .wrapper__header {
-  background: url('../img/background_header.jpg');
+  padding-top: 20px;
+  background: url('../img/background_header.jpg') center;
   text-align: center;
+  min-height: 540px;
 }
 
 .registration {
-  margin-top: 20px;
   line-height: 36px;
   box-sizing: border-box;
   font-size: 14px;
@@ -29,7 +46,7 @@
   &__register {
     display: inline-block;
     width: 90px;
-    border: 1px solid $text-color;
+    border: 2px solid $text-color;
     border-radius: 20px;
     color: $text-color;
   }
@@ -60,13 +77,20 @@
 
   &__subtitle {
     font-size: 18px;
+    font-family: Roboto, Arial, sans-serif;
   }
 
   &__proceed {
-    border-radius: 20px;
-    background-color: $action-red;
+    margin-top: 20px;
+  }
+
+  &__button {
     width: 280px;
     height: 40px;
+    background-color: $action-red;
+    border: none;
+    border-radius: 20px;
+    color: $text-color;
     font-size: 14px;
     font-weight: bold;
   }
@@ -79,30 +103,25 @@
 }
 
 .about {
-  &__title {
-    margin: 38px 0 15px;
-    color: $text-dark;
-    font-size: 22px;
-    font-weight: bold;
-  }
-
   &__section {
     float: left;
     height: 238px;
+    margin-top: 10px;
     padding-left: 20px;
-    box-sizing: border-box;
+    background-size: cover;
     border-radius: 4px;
+    box-sizing: border-box;
 
     &--step1 {
-      background: url('../img/about/about1.jpg');
+      background: url('../img/about/step1.jpg') center;
     }
 
     &--step2 {
-      background: url('../img/about/about2.jpg');
+      background: url('../img/about/step2.jpg') center;
     }
 
     &--step3 {
-      background: url('../img/about/about3.jpg');
+      background: url('../img/about/step3.jpg') center;
     }
   }
 
@@ -111,9 +130,12 @@
     width: 70px;
     height: 20px;
     background: $action-red;
+    border-radius: 10px;
     font-size: 10px;
-    line-height: 31px;
+    line-height: 20px;
     text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   &__subtitle {
@@ -122,8 +144,10 @@
   }
 
   &__text {
-    color: $text-light-dark;
+    margin-top: 15px;
+    color: $text-extra-light;
     font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
   }
 }
 
@@ -145,6 +169,9 @@
 
   &__avatar {
     position: relative;
+    margin: 0 auto;
+    width: 121px;
+    height: 121px;
   }
 
   &__img {
@@ -155,54 +182,52 @@
 
   &__icon {
     position: absolute;
-    width: 33px;
-    height: 33px;
-    right: 17px;
-    bottom: 17px;
+    width: 39px;
+    height: 39px;
+    right: 0;
+    bottom: 0;
+    background: #fff;
     border-radius: 50%;
-    z-index: 10;
+    z-index: 5;
 
     &:before {
-      width: 37px;
-      height: 37px;
-      background: #fff;
-      border-radius: 50%;
-      z-index: 5;
-    }
-
-    &:after {
       position: absolute;
       display: block;
-      top: 5px;
-      left: 5px;
-      width: 17px;
-      height: 17px;
-      z-index: 15;
+      top: 3px;
+      left: 3px;
+      width: 33px;
+      height: 33px;
+      border-radius: 50%;
+      content: '';
+      z-index: 10;
     }
 
-    &--television:after {
+    &--television:before {
       background: $action-red;
-      content: url('../img/icons/icon_tele.png');
     }
 
-    &--flask:after {
+    &--flask:before {
       background: $bg-yellow;
-      content: url('../img/icons/icon_flask.png');
     }
 
-    &--cup:after {
+    &--cup:before {
       background: $bg-green;
-      content: url('../img/icons/icon_cup.png');
     }
 
-    &--plane:after {
+    &--plane:before {
       background: $bg-blue;
-      content: url('../img/icons/icon_plane.png');
     }
   }
 
+  &__logo-img {
+    position: relative;
+    top: 10px;
+    text-align: center;
+    z-index: 15;
+  }
+
   &__name {
-    margin: 20px 0;
+    margin: 20px 0 15px;
     color: $text-dark;
     font-size: 14px;
     font-weight: bold;
@@ -212,14 +237,20 @@
     color: $text-light-dark;
     font-size: 14px;
     font-weight: 300;
+    font-family: Roboto, Arial, sans-serif;
   }
 
   &__more {
     margin: 40px 0 20px;
+  }
+
+  &__button {
     width: 280px;
     height: 40px;
     border-radius: 20px;
     border: 2px solid $action-red;
+    font-size: 14px;
+    font-weight: bold;
     box-sizing: border-box;
     color: $action-red;
     background: #fff;
@@ -238,22 +269,28 @@
   &__question {
     color: $text-dark;
     font-size: 18px;
+    font-family: Roboto, Arial, sans-serif;
   }
 
   &__controls {
-
+    text-align: center;
   }
 
-  &__imput {
-    padding-left: 20px;
+  &__input {
     display: block;
+    width: 100%;
+    margin: 18px;
+    padding-left: 20px;
     color: $text-light;
     vertical-align: middle;
+    font-family: Roboto, Arial, sans-serif;
+    @include placeholder-color($text-light);
+    box-sizing: border-box;
   }
 
   &__button {
-    @extend .header__proceed;
-    display: block;
+    @extend .header__button;
+    margin-bottom: 40px;
   }
 }
 
@@ -277,6 +314,7 @@
   &__link {
     color: $text-light-dark;
     font-size: 14px;
+    font-family: Roboto, Arial, sans-serif;
   }
 }
 
