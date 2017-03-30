@@ -6,8 +6,9 @@
 .content {
   width: 100%;
   min-width: 320px;
-  max-width: 1024px;
+  max-width: 940px;
   margin: 0 auto;
+  box-sizing: border-box;
 
   &__title {
     margin: 38px 0 15px;
@@ -18,6 +19,15 @@
   }
 }
 
+header {
+  padding-top: 20px;
+
+  @include respond-to(tablet) {
+    height: 700px;
+    padding-top: 45px;
+  }
+}
+
 .clearfix:after {
   display: block;
   clear: both;
@@ -25,8 +35,8 @@
 }
 
 .wrapper__header {
-  padding-top: 20px;
-  background: url('../img/background_header.jpg') center no-repeat;
+  background: url('../img/background_header.jpg') top center no-repeat;
+  background-size: cover;
   text-align: center;
   min-height: 540px;
 }
@@ -37,6 +47,11 @@
   font-size: 14px;
   font-weight: bold;
   text-align: center;
+
+  @include respond-to(tablet) {
+    float: right;
+    width: 240px;
+  }
 
   &__login {
     display: inline-block;
@@ -57,14 +72,28 @@
   margin-top: 115px;
   text-align: center;
 
+  @include respond-to(tablet) {
+    float: left;
+    width: 180px;
+    margin-top: 10px;
+  }
+
+  &--red {
+    margin: 30px 0;
+
+    @include respond-to(tablet) {
+      margin-top: 0;
+    }
+  }
+
   &__link {
     color: $text-color;
     font-size: 20px;
     font-weight: bold;
-  }
 
-  &--red {
-    color: $action-red;
+    &--red {
+      color: $action-red;
+    }
   }
 }
 
@@ -74,11 +103,20 @@
     font-size: 30px;
     font-weight: bold;
     text-transform: uppercase;
+
+    @include respond-to(tablet) {
+      margin-top: 150px;
+      font-size: 52px;
+    }
   }
 
   &__subtitle {
     font-size: 18px;
     font-family: Roboto, Arial, sans-serif;
+
+    @include respond-to(tablet) {
+      font-size: 24px;
+    }
   }
 
   &__proceed {
@@ -86,7 +124,7 @@
   }
 
   &__button {
-    width: 280px;
+    width: 226px;
     height: 40px;
     background-color: $action-red;
     border: none;
@@ -106,16 +144,29 @@
 
 .about {
   &__section {
+    position: relative;
     float: left;
+    width: 100%;
     height: 238px;
     margin-top: 10px;
-    padding-left: 20px;
     background-size: cover;
     border-radius: 4px;
     box-sizing: border-box;
 
+    @include respond-to(tablet) {
+      width: 32.5%;
+      height: 398px;
+      margin-right: 1.25%;
+      padding-left: 0;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+
     &--step1 {
-      background: url('../img/about/step1.jpg') center;
+      background-image: url('../img/about/step1.jpg');
     }
 
     &--step2 {
@@ -127,8 +178,14 @@
     }
   }
 
+  &__container {
+    position: absolute;
+    bottom: 20px;
+    padding: 0 20px;
+  }
+
   &__step {
-    margin: 75px 0 20px;
+    margin-bottom: 20px;
     width: 70px;
     height: 20px;
     background: $action-red;
@@ -164,9 +221,18 @@
   }
 
   &__section {
-    box-sizing: border-box;
+    float: left;
     width: 100%;
     margin-top: 30px;
+    box-sizing: border-box;
+
+    @include respond-to(tablet) {
+      width: 50%;
+    }
+
+    @include respond-to(desktop) {
+      width: 25%;
+    }
   }
 
   &__avatar {
@@ -256,6 +322,7 @@
     box-sizing: border-box;
     color: $action-red;
     background: #fff;
+    cursor: pointer;
   }
 }
 
@@ -266,6 +333,19 @@
     margin-bottom: 10px;
     box-sizing: border-box;
     text-align: center;
+
+    @include respond-to(tablet) {
+      width: 31.3%;
+      height: 310px;
+      margin-right: 2%;
+      margin-bottom: 20px;
+    }
+
+    &--expandable {
+      @include respond-to(tablet) {
+        width: 64.5%;
+      }
+    }
   }
 
   &__img {
@@ -273,6 +353,10 @@
     height: 121px;
     object-fit: cover;
     border-radius: 5px;
+
+    @include respond-to(tablet) {
+      height: 310px;
+    }
   }
 
   &__subtitle-wrapper {
@@ -284,10 +368,11 @@
   &__subtitle {
     position: relative;
     left: -50%;
-    top: -50%;
+    top: -10px;
     color:  #fff;
     font-size: 22px;
     font-weight: bold;
+    line-height: 25px;
     z-index: 10;
   }
 }
@@ -307,49 +392,77 @@
     font-family: Roboto, Arial, sans-serif;
   }
 
-  &__controls {
+  &__form {
+    margin: 20px 0 40px;
     text-align: center;
+
+    @include respond-to(tablet) {
+      margin: 40px 0 100px;
+    }
   }
 
   &__input {
     display: block;
-    width: 100%;
+    width: 280px;
     height: 40px;
-    margin: 18px;
+    margin: 0 auto 20px;
     padding-left: 20px;
     color: $text-light;
     vertical-align: middle;
     font-family: Roboto, Arial, sans-serif;
     @include placeholder-color($text-light);
     box-sizing: border-box;
+
+    @include respond-to(tablet) {
+      display: inline;
+      margin: 0;
+    }
   }
 
   &__button {
     @extend .header__button;
-    margin-bottom: 40px;
+
+    @include respond-to(tablet) {
+      margin-left: 20px;
+    }
   }
 }
 
 .wrapper__footer {
   border-top: 4px solid $action-red;
-  padding-bottom: 30px;
+  padding: 15px 0 0 20px;
+
+  @include respond-to(tablet) {
+    padding: 50px 0 50px 40px;
+  }
 }
 
 .menu {
-  margin-top: 15px;
+  margin-top: 20px;
   text-align: center;
+
+  @include respond-to(tablet) {
+    float: left;
+    width: 100px;
+    margin: 0 40px;
+    text-align: left;
+  }
 
   &__title {
     margin-bottom: 10px;
     color: $text-dark;
     font-size: 14px;
     font-weight: bold;
-    text-align: center;
   }
 
   &__item {
     display: inline-block;
     padding: 0 10px 0 10px;
+
+    @include respond-to(tablet) {
+      display: block;
+      margin-bottom: 10px;
+    }
   }
 
   &__link {
@@ -363,6 +476,11 @@
   margin-top: 20px;
   text-align: center;
 
+  @include respond-to(tablet) {
+    margin: 0 40px 0 0;
+    float: right;
+  }
+
   &__title {
     color: $text-design;
     font-size: 10px;
@@ -370,12 +488,7 @@
   }
 
   &__logo {
-    width: 110px;
-    height: 24px;
+    margin-top: 10px;
     text-align: center;
   }
-}
-
-@media (max-width: 959px) {
-
 }
