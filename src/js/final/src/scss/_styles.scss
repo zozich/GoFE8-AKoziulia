@@ -215,6 +215,10 @@ header {
 .carousel {
   display: none;
 
+  &__control {
+    display: none;
+  }
+
   @include respond-to(tablet) {
     position: relative;
     display: block;
