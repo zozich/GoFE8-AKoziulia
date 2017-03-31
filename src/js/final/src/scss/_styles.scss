@@ -149,7 +149,6 @@ header {
     width: 100%;
     height: 238px;
     margin-top: 10px;
-    background-size: cover;
     border-radius: 4px;
     box-sizing: border-box;
 
@@ -164,17 +163,20 @@ header {
       }
     }
 
+    @include respond-to(mobile) {
+      &--step1 {
+        background: url('../img/about/step1_1.jpg');
+      }
 
-    &--step1 {
-      background-image: url('../img/about/step1.jpg');
-    }
+      &--step2 {
+        background: url('../img/about/step2_1.jpg') center;
+      }
 
-    &--step2 {
-      background: url('../img/about/step2.jpg') center;
-    }
+      &--step3 {
+        background: url('../img/about/step3_1.jpg') center;
+      }
 
-    &--step3 {
-      background: url('../img/about/step3.jpg') center;
+      background-size: cover;
     }
   }
 
@@ -207,6 +209,61 @@ header {
     color: $text-extra-light;
     font-size: 14px;
     font-family: Roboto, Arial, sans-serif;
+  }
+}
+
+.carousel {
+  display: none;
+
+  @include respond-to(tablet) {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 398px;
+    overflow: hidden;
+    border-radius: 5px;
+
+    &__wrapper {
+      position: relative;
+      width: 100%;
+    }
+
+    &__list {
+      width: 20000em;
+      position: relative;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      height: 398px;
+    }
+
+    &__item {
+      float: left;
+      height: 100%;
+    }
+
+    &__img {
+      display: block;
+      max-width: 100%;
+      height: 100%;
+    }
+
+    &__control {
+      position: absolute;
+      display: block;
+      top: -50px;
+      color: #fff;
+      font-size: 200px;
+      font-weight: 100;
+    }
+
+    &__previous {
+      left: 10px;
+    }
+
+    &__next {
+      right: 10px;
+    }
   }
 }
 
@@ -369,7 +426,7 @@ header {
     position: relative;
     left: -50%;
     top: -10px;
-    color:  #fff;
+    color: #fff;
     font-size: 22px;
     font-weight: bold;
     line-height: 25px;

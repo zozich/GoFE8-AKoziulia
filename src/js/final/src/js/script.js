@@ -6,7 +6,7 @@ $(function () {
 
     var topics = ['Sport and Activity', 'Wellness and Health', 'Extreme Sports and Expeditions',
         'Games', 'Culture and Education', 'Relaxation', 'Travelling'];
-    var ideaIds = ['idea0', 'idea1', 'idea2', 'idea3', 'idea4', 'idea5', 'idea6']
+    var ideaIds = ['idea0', 'idea1', 'idea2', 'idea3', 'idea4', 'idea5', 'idea6'];
     var imageGetUrl = "https://pixabay.com/api/?key=4967317-cf3933732a04c09ee425d3446&orientation=horizontal&image_type=photo&per_page=7&min_width=620&min_height=310&q=";
 
     for (var i = 0; i < topics.length; i++) {
@@ -44,4 +44,29 @@ $(function () {
         replaceImages(searchText);
     });
 
+    $('#carousel1').jcarousel();
+    $('#carousel2').jcarousel();
+    $('#carousel3').jcarousel();
+
+    $('.carousel__previous')
+        .on('jcarouselcontrol:active', function () {
+            $(this).removeClass('inactive');
+        })
+        .on('jcarouselcontrol:inactive', function () {
+            $(this).addClass('inactive');
+        })
+        .jcarouselControl({
+            target: '-=1'
+        });
+
+    $('.carousel__next')
+        .on('jcarouselcontrol:active', function () {
+            $(this).removeClass('inactive');
+        })
+        .on('jcarouselcontrol:inactive', function () {
+            $(this).addClass('inactive');
+        })
+        .jcarouselControl({
+            target: '+=1'
+        });
 });
