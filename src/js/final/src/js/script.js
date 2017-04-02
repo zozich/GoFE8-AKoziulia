@@ -3,15 +3,19 @@ $(function () {
     var topics = ['Sport and Activity', 'Wellness and Health', 'Extreme Sports and Expeditions',
         'Games', 'Culture and Education', 'Relaxation', 'Travelling'];
     var ideaIds = ['idea0', 'idea1', 'idea2', 'idea3', 'idea4', 'idea5', 'idea6'];
-    var imageGetUrl = "https://pixabay.com/api/?key=4967317-cf3933732a04c09ee425d3446&orientation=horizontal&image_type=photo&per_page=7&min_width=620&min_height=310&q=";
+    var imageGetUrl = "http://pixabay.com/api/?key=4967317-cf3933732a04c09ee425d3446&orientation=horizontal&image_type=photo&per_page=7&min_width=620&min_height=310&q=";
 
     for (var i = 0; i < topics.length; i++) {
         //replaceImages(topics[i], i);
     }
 
+    $.support.cors = true;
+
     function replaceImages(searchKey, imagePos) {
         $.ajax({
             url: imageGetUrl + encodeURIComponent(searchKey),
+            type: 'GET',
+            dataType: 'json',
             success: function (data) {
                 if (imagePos) {
                     $('#' + ideaIds[imagePos]).attr('src', data.hits[0].webformatURL);
@@ -24,9 +28,8 @@ $(function () {
                 }
                 $grid.masonry('layout');
             },
-            dataType: 'json',
             error: function (error) {
-                console.log(error);
+                console.log("Error occurred!", error);
             }
         });
     }

@@ -23,8 +23,13 @@ gulp.task('build-css', ['clean-css'], function () {
         .pipe(gulp.dest('dist/css'))
 });
 
+gulp.task('copy-crossbrowser-fix', function () {
+    return gulp.src('src/fix/**')
+        .pipe(gulp.dest('dist/fix'));
+});
+
 gulp.task('build-js', ['clean-js'], function () {
-    return gulp.src(['src/lib/jquery/*.js', 'src/lib/**/*.js', 'src/js/*.js'])
+    return gulp.src(['src/lib/es5shim/*.js', 'src/lib/jquery/*.js', 'src/lib/**/*.js', 'src/js/*.js'])
         .pipe(concat('script.js'))
         .pipe(gulp.dest('dist/js'))
         .pipe(uglify())
@@ -70,5 +75,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', function (cb) {
-    sequence('clean', ['build-css', 'build-js', 'prepare-images', 'copy-fonts'])(cb);
+    sequence('clean', ['build-css', 'build-js', 'prepare-images', 'copy-fonts', 'copy-crossbrowser-fix'])(cb);
 });
