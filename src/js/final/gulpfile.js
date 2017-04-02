@@ -29,7 +29,7 @@ gulp.task('copy-crossbrowser-fix', function () {
 });
 
 gulp.task('build-js', ['clean-js'], function () {
-    return gulp.src(['src/lib/es5shim/*.js', 'src/lib/jquery/*.js', 'src/lib/**/*.js', 'src/js/*.js'])
+    return gulp.src(['src/lib/jquery/*.js', 'src/lib/**/*.js', 'src/js/*.js'])
         .pipe(concat('script.js'))
         .pipe(gulp.dest('dist/js'))
         .pipe(uglify())
