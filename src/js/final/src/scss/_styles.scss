@@ -529,6 +529,7 @@ header {
 
 .logo-bottom {
   font-size: 17px;
+  text-align: center;
 
   @include respond-to(tablet) {
     float: left;
@@ -592,7 +593,10 @@ header {
     font-size: 10px;
     font-weight: bold;
     text-transform: uppercase;
-    text-align: right;
+
+    @include respond-to(tablet) {
+      text-align: right;
+    }
   }
 
   &__logo {
