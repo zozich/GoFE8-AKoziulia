@@ -73,7 +73,6 @@ $(function () {
         itemSelector: '.ideas__item',
         percentPosition: true,
         columnWidth: '.ideas__item',
-        gutter: '.ideas__gutter',
-        isInitLayout: false
+        gutter: '.ideas__gutter'
     });
 });
