@@ -1,13 +1,13 @@
 .wrapper {
   color: $text-color;
-  font-family: Montserrat, Arial, sans-serif;
+  font-family: $font-montserrat;
 }
 
 .content {
-  width: 100%;
-  min-width: 320px;
-  max-width: 940px;
   margin: 0 auto;
+  max-width: 960px;
+  min-width: 320px;
+  width: 100%;
   box-sizing: border-box;
 
   &__title {
@@ -16,6 +16,10 @@
     font-size: 22px;
     font-weight: bold;
     text-align: center;
+
+    @include respond-to(tablet) {
+      margin: 96px 0 27px;
+    }
   }
 }
 
@@ -24,7 +28,7 @@ header {
 
   @include respond-to(tablet) {
     height: 700px;
-    padding-top: 45px;
+    padding-top: 37px;
   }
 }
 
@@ -42,7 +46,7 @@ header {
 }
 
 .registration {
-  line-height: 36px;
+  line-height: 34px;
   box-sizing: border-box;
   font-size: 14px;
   font-weight: bold;
@@ -50,71 +54,63 @@ header {
 
   @include respond-to(tablet) {
     float: right;
-    width: 240px;
+    width: 189px;
   }
 
   &__login {
     display: inline-block;
-    width: 90px;
+    width: 74px;
     color: $text-color;
   }
 
   &__register {
     display: inline-block;
-    width: 90px;
+    width: 87px;
     border: 2px solid $text-color;
     border-radius: 20px;
     color: $text-color;
   }
 }
 
-.logo {
+.logo-top {
   margin-top: 115px;
   text-align: center;
+  letter-spacing: 1px;
 
   @include respond-to(tablet) {
     float: left;
-    width: 180px;
+    width: 196px;
     margin-top: 10px;
-  }
-
-  &--red {
-    margin: 30px 0;
-
-    @include respond-to(tablet) {
-      margin-top: 0;
-    }
   }
 
   &__link {
     color: $text-color;
     font-size: 20px;
     font-weight: bold;
-
-    &--red {
-      color: $action-red;
-    }
   }
 }
 
 .header {
   &__title {
-    margin: 38px 0 20px;
+    max-width: 500px;
+    margin: 38px auto 20px;
     font-size: 30px;
     font-weight: bold;
+    line-height: 61px;
     text-transform: uppercase;
 
     @include respond-to(tablet) {
-      margin-top: 150px;
+      margin-top: 142px;
       font-size: 52px;
     }
   }
 
   &__subtitle {
     font-size: 18px;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: $font-roboto;
 
     @include respond-to(tablet) {
+      margin-top: 27px;
       font-size: 24px;
     }
   }
@@ -132,14 +128,19 @@ header {
     color: $text-color;
     font-size: 14px;
     font-weight: bold;
+    letter-spacing: $button-letter-spacing;
     cursor: pointer;
+
+    @include respond-to(tablet) {
+      margin-top: 17px;
+    }
   }
 }
 
 .about,
 .partners,
 .ideas {
-  padding: 10px;
+  padding: 0 10px;
 }
 
 .about {
@@ -153,9 +154,9 @@ header {
     box-sizing: border-box;
 
     @include respond-to(tablet) {
-      width: 32.5%;
+      width: 32%;
       height: 398px;
-      margin-right: 1.25%;
+      margin-right: 2%;
       padding-left: 0;
 
       &:last-child {
@@ -187,7 +188,7 @@ header {
   }
 
   &__step {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
     width: 70px;
     height: 20px;
     background: $action-red;
@@ -196,19 +197,20 @@ header {
     line-height: 20px;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
   }
 
   &__subtitle {
     font-size: 24px;
     font-weight: bold;
+    line-height: 29px;
   }
 
   &__text {
     margin-top: 15px;
     color: $text-extra-light;
     font-size: 14px;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: $font-roboto;
   }
 }
 
@@ -255,23 +257,24 @@ header {
     &__control {
       position: absolute;
       display: block;
-      top: -50px;
+      top: 41px;
       color: #fff;
       font-size: 200px;
       font-weight: 100;
     }
 
     &__previous {
-      left: 10px;
+      left: 21px;
     }
 
     &__next {
-      right: 10px;
+      right: 21px;
     }
   }
 }
 
 .partners {
+  padding-top: 4px;
   text-align: center;
 
   &__title {
@@ -289,10 +292,16 @@ header {
 
     @include respond-to(tablet) {
       width: 50%;
+      margin-top: 5px;
     }
 
     @include respond-to(desktop) {
-      width: 25%;
+      width: 24%;
+      margin-right: 1.3%;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 
@@ -366,11 +375,12 @@ header {
     color: $text-light-dark;
     font-size: 14px;
     font-weight: 300;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: $font-roboto;
+    line-height: 17px;
   }
 
   &__more {
-    margin: 40px 0 20px;
+    margin: 37px 0 20px;
   }
 
   &__button {
@@ -382,12 +392,27 @@ header {
     font-weight: bold;
     box-sizing: border-box;
     color: $action-red;
+    letter-spacing: $button-letter-spacing;
     background: #fff;
     cursor: pointer;
+
+    @include respond-to(tablet) {
+      width: 192px;
+    }
   }
 }
 
 .ideas {
+  &__grid {
+    margin-top: 39px;
+  }
+
+  &__gutter {
+    @include respond-to(tablet) {
+      width: 2%;
+    }
+  }
+
   &__item {
     width: 100%;
     height: 121px;
@@ -396,15 +421,19 @@ header {
     text-align: center;
 
     @include respond-to(tablet) {
-      width: 31.3%;
+      width: 32%;
       height: 310px;
-      margin-right: 2%;
+      margin-right: 0;
       margin-bottom: 20px;
+
+      &--last-row {
+        margin-bottom: 0;
+      }
     }
 
     &--expandable {
       @include respond-to(tablet) {
-        width: 64.5%;
+        width: 66%;
       }
     }
   }
@@ -448,18 +477,15 @@ header {
   }
 
   &__question {
+    padding-top: 10px;
     color: $text-dark;
     font-size: 18px;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: $font-roboto;
   }
 
   &__form {
-    margin: 20px 0 40px;
+    margin: 23px 0 40px;
     text-align: center;
-
-    @include respond-to(tablet) {
-      margin: 40px 0 100px;
-    }
   }
 
   &__input {
@@ -467,14 +493,15 @@ header {
     width: 280px;
     height: 40px;
     margin: 0 auto 20px;
-    padding-left: 20px;
+    padding-left: 13px;
     color: $text-light;
     vertical-align: middle;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: $font-roboto;
     @include placeholder-color($text-light);
     box-sizing: border-box;
 
     @include respond-to(tablet) {
+      width: 240px;
       display: inline;
       margin: 0;
     }
@@ -484,7 +511,8 @@ header {
     @extend .header__button;
 
     @include respond-to(tablet) {
-      margin-left: 20px;
+      width: 160px;
+      margin-left: 5px;
     }
   }
 }
@@ -494,7 +522,23 @@ header {
   padding: 15px 0 0 20px;
 
   @include respond-to(tablet) {
-    padding: 50px 0 50px 40px;
+    margin-top: 100px;
+    padding: 38px 0 50px 18px;
+  }
+}
+
+.logo-bottom {
+  font-size: 17px;
+
+  @include respond-to(tablet) {
+    float: left;
+    width: 191px;
+  }
+
+  &__link {
+    font-size: 17px;
+    color: $action-red;
+    font-weight: bold;
   }
 }
 
@@ -504,13 +548,14 @@ header {
 
   @include respond-to(tablet) {
     float: left;
-    width: 100px;
+    width: 80px;
     margin: 0 40px;
     text-align: left;
   }
 
   &__title {
     margin-bottom: 10px;
+    padding-left: 10px;
     color: $text-dark;
     font-size: 14px;
     font-weight: bold;
@@ -529,7 +574,7 @@ header {
   &__link {
     color: $text-light-dark;
     font-size: 14px;
-    font-family: Roboto, Arial, sans-serif;
+    font-family: $font-roboto;
   }
 }
 
@@ -538,7 +583,7 @@ header {
   text-align: center;
 
   @include respond-to(tablet) {
-    margin: 0 40px 0 0;
+    margin: 0 19px 0 0;
     float: right;
   }
 
@@ -546,6 +591,8 @@ header {
     color: $text-design;
     font-size: 10px;
     font-weight: bold;
+    text-transform: uppercase;
+    text-align: right;
   }
 
   &__logo {

@@ -1,9 +1,5 @@
 $(function () {
 
-    var $grid = $('.ideas__grid').masonry({
-        itemSelector: '.ideas__item'
-    });
-
     var topics = ['Sport and Activity', 'Wellness and Health', 'Extreme Sports and Expeditions',
         'Games', 'Culture and Education', 'Relaxation', 'Travelling'];
     var ideaIds = ['idea0', 'idea1', 'idea2', 'idea3', 'idea4', 'idea5', 'idea6'];
@@ -69,4 +65,11 @@ $(function () {
         .jcarouselControl({
             target: '+=1'
         });
+
+    var $grid = $('.ideas__grid').masonry({
+        itemSelector: '.ideas__item',
+        percentPosition: true,
+        columnWidth: '.ideas__item',
+        gutter: '.ideas__gutter'
+    });
 });
