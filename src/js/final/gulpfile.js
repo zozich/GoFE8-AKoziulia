@@ -11,7 +11,7 @@ var pngquant = require('imagemin-pngquant');
 var prefixer = require('gulp-autoprefixer');
 
 gulp.task('build-css', ['clean-css'], function () {
-    return gulp.src(['src/lib/**/*.css', 'src/scss/main.scss'])
+    return gulp.src(['src/scss/main.scss'])
         .pipe(concat('styles.css'))
         .pipe(sass())
         .pipe(prefixer({
@@ -22,6 +22,19 @@ gulp.task('build-css', ['clean-css'], function () {
         .pipe(rename('styles.min.css'))
         .pipe(gulp.dest('dist/css'))
 });
+
+gulp.task('ie_8-9fix', ['clean-css'], function () {
+    return gulp.src(['src/scss/ie8-9.scss'])
+        .pipe(sass())
+        .pipe(prefixer({
+            browsers: ['ie >= 8', 'Firefox >= 5', 'Opera >= 15']
+        }))
+        .pipe(gulp.dest('dist/css'))
+        .pipe(cleanCss())
+        .pipe(rename('ie8-9.min.css'))
+        .pipe(gulp.dest('dist/css'))
+});
+
 
 gulp.task('copy-crossbrowser-fix', function () {
     return gulp.src('src/fix/**')
@@ -75,5 +88,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', function (cb) {
-    sequence('clean', ['build-css', 'build-js', 'prepare-images', 'copy-fonts', 'copy-crossbrowser-fix'])(cb);
+    sequence('clean', ['build-css', 'build-js', 'prepare-images', 'copy-fonts', 'copy-crossbrowser-fix', 'ie_8-9fix'])(cb);
 });

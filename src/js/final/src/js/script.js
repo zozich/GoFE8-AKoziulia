@@ -5,11 +5,11 @@ $(function () {
     var ideaIds = ['idea0', 'idea1', 'idea2', 'idea3', 'idea4', 'idea5', 'idea6'];
     var imageGetUrl = "http://pixabay.com/api/?key=4967317-cf3933732a04c09ee425d3446&orientation=horizontal&image_type=photo&per_page=7&min_width=620&min_height=310&q=";
 
-    for (var i = 0; i < topics.length; i++) {
-        //replaceImages(topics[i], i);
-    }
-
     $.support.cors = true;
+
+    for (var i = 0; i < topics.length; i++) {
+        replaceImages(topics[i], i);
+    }
 
     function replaceImages(searchKey, imagePos) {
         $.ajax({

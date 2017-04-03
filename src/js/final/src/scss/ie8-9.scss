@@ -1,0 +1,50 @@
+$mq-responsive: false;
+@import 'main';
+
+.registration__register,
+.header__button,
+.about__section,
+.about__step,
+.carousel,
+.partners__img,
+.partners__background,
+.partners__circle,
+.partners__button,
+.ideas__img {
+  behavior: url(dist/fix/PIE.htc);
+  zoom: 1;
+}
+
+.registration__register,
+.header__button,
+.about__section,
+.about__step,
+.carousel,
+.partners__img,
+.partners__button,
+.ideas__img {
+  position: relative;
+}
+
+.ideas__img {
+  width: auto;
+  height: auto;
+}
+
+.ideas__item {
+  overflow: hidden;
+  width: 300px !important;
+
+  &--expandable {
+    width: 620px !important;
+  }
+}
+
+.about__section {
+  width: 300px;
+  margin-left: 18px;
+}
+
+.about__section--step1 {
+  margin-left: 0 !important;
+}
