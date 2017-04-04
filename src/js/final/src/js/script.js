@@ -27,6 +27,7 @@ $(function () {
                     }
                 }
                 $grid.masonry('layout');
+                fixIeObjectFit();
             },
             error: function (error) {
                 console.log("Error occurred!", error);
@@ -75,4 +76,18 @@ $(function () {
         columnWidth: '.ideas__item',
         gutter: '.ideas__gutter'
     });
+
+    function fixIeObjectFit() {
+        if (!Modernizr.objectfit) {
+            $('.ideas__item').each(function () {
+                var $container = $(this);
+                var imgUrl = $container.find('img').prop('src');
+                if (imgUrl) {
+                    $container
+                        .css('backgroundImage', 'url(' + imgUrl + ')')
+                        .addClass('compat-object-fit');
+                }
+            });
+        }
+    }
 });
