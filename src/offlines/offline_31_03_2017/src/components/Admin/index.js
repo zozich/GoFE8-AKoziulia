@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 
 export default class Admin extends Component {
+  static onEnter(nextState, replace) {
+
+  }
+
   render() {
     return (
       <div className='row'>
