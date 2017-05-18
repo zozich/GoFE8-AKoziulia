@@ -1,0 +1,41 @@
+.sprite {
+  background-image: url('../img/sprite/sprite.png');
+  background-repeat: no-repeat;
+  display: block;
+
+  &__arrow-left {
+    width: 30px;
+    height: 55px;
+    background-position: -5px -5px;
+  }
+
+  &__arrow-right {
+    width: 30px;
+    height: 55px;
+    background-position: -45px -5px;
+  }
+
+  &__cup {
+    width: 16px;
+    height: 17px;
+    background-position: -85px -5px;
+  }
+
+  &__flask {
+    width: 13px;
+    height: 16px;
+    background-position: -111px -5px;
+  }
+
+  &__plane {
+    width: 17px;
+    height: 16px;
+    background-position: -134px -5px;
+  }
+
+  &__tele {
+    width: 16px;
+    height: 16px;
+    background-position: -161px -5px;
+  }
+}

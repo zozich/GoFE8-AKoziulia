@@ -41,18 +41,32 @@ gulp.task('copy-crossbrowser-fix', function () {
         .pipe(gulp.dest('dist/fix'));
 });
 
-gulp.task('build-js', ['clean-js'], function () {
-    return gulp.src(['src/lib/jquery/*.js', 'src/lib/**/*.js', 'src/js/*.js'])
-        .pipe(concat('script.js'))
-        .pipe(gulp.dest('dist/js'))
+gulp.task('build-vendor-js', ['clean-vendor-js'], function () {
+    return gulp.src(['src/lib/jquery/*.js', 'src/lib/**/*.js'])
+        .pipe(concat('vendor.js'))
+        .pipe(gulp.dest('dist/js/vendor'))
         .pipe(uglify())
-        .pipe(rename('script.min.js'))
-        .pipe(gulp.dest('dist/js'));
+        .pipe(rename('vendor.min.js'))
+        .pipe(gulp.dest('dist/js/vendor'));
 });
 
-gulp.task('clean-js', function () {
-    return gulp.src('dist/js')
+gulp.task('build-app-js', ['clean-app-js'], function () {
+  return gulp.src(['src/js/*.js'])
+    .pipe(concat('app.js'))
+    .pipe(gulp.dest('dist/js/app'))
+    .pipe(uglify())
+    .pipe(rename('app.min.js'))
+    .pipe(gulp.dest('dist/js/app'));
+});
+
+gulp.task('clean-app-js', function () {
+    return gulp.src('dist/js/app')
         .pipe(clean());
+});
+
+gulp.task('clean-vendor-js', function () {
+  return gulp.src('dist/js/vendor')
+    .pipe(clean());
 });
 
 gulp.task('clean-css', function () {
@@ -88,5 +102,5 @@ gulp.task('watch', function () {
 });
 
 gulp.task('default', function (cb) {
-    sequence('clean', ['build-css', 'build-js', 'prepare-images', 'copy-fonts', 'copy-crossbrowser-fix', 'ie_8-9fix'])(cb);
+    sequence('clean', ['build-css', 'build-vendor-js', 'build-app-js', 'prepare-images', 'copy-fonts', 'copy-crossbrowser-fix', 'ie_8-9fix'])(cb);
 });

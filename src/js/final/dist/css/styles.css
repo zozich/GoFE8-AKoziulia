@@ -51,6 +51,35 @@ ul li {
 a {
   text-decoration: none; }
 
+.sprite {
+  background-image: url("../img/sprite/sprite.png");
+  background-repeat: no-repeat;
+  display: block; }
+  .sprite__arrow-left {
+    width: 30px;
+    height: 55px;
+    background-position: -5px -5px; }
+  .sprite__arrow-right {
+    width: 30px;
+    height: 55px;
+    background-position: -45px -5px; }
+  .sprite__cup {
+    width: 16px;
+    height: 17px;
+    background-position: -85px -5px; }
+  .sprite__flask {
+    width: 13px;
+    height: 16px;
+    background-position: -111px -5px; }
+  .sprite__plane {
+    width: 17px;
+    height: 16px;
+    background-position: -134px -5px; }
+  .sprite__tele {
+    width: 16px;
+    height: 16px;
+    background-position: -161px -5px; }
+
 @font-face {
   font-family: 'Montserrat';
   src: url("../fonts/montserrat/montserrat-regular-webfont.eot");
@@ -277,7 +306,7 @@ header {
       .carousel__control {
         position: absolute;
         display: block;
-        top: 41px;
+        top: 160px;
         color: #fff;
         font-size: 200px;
         font-weight: 100; }
@@ -347,8 +376,13 @@ header {
   .partners__logo-img {
     position: relative;
     top: 8px;
+    left: 8px;
     text-align: center;
     z-index: 15; }
+    .partners__logo-img.sprite__flask {
+      left: 10px; }
+    .partners__logo-img.sprite__plane {
+      left: 7px; }
   .partners__name {
     margin: 20px 0 15px;
     color: #333;

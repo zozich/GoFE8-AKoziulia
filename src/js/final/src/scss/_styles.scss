@@ -257,7 +257,7 @@ header {
     &__control {
       position: absolute;
       display: block;
-      top: 41px;
+      top: 160px;
       color: #fff;
       font-size: 200px;
       font-weight: 100;
@@ -358,8 +358,17 @@ header {
   &__logo-img {
     position: relative;
     top: 8px;
+    left: 8px;
     text-align: center;
     z-index: 15;
+
+    &.sprite__flask {
+      left: 10px;
+    }
+
+    &.sprite__plane {
+      left: 7px;
+    }
   }
 
   &__name {
